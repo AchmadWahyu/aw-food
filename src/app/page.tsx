@@ -1,99 +1,20 @@
-import Image from 'next/image';
+import { Data } from './data.types';
 
-const data = [
-  {
-    name: 'Lemper',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Tahu Isi',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Lontong',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Lemper',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Tahu Isi',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Lontong',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Lemper',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Tahu Isi',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Lontong',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Lemper',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Tahu Isi',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Lontong',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Lemper',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Tahu Isi',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Lontong',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Lemper',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Tahu Isi',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-  {
-    name: 'Lontong',
-    price: 2000,
-    lastUpdatedDate: '17/04/24',
-  },
-];
+async function getData(): Promise<Data> {
+  const res = await fetch(
+    'https://gist.githubusercontent.com/AchmadWahyu/173e65a0667ff93ac35b3961163be27e/raw'
+  );
 
-export default function Home() {
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+
+  return res.json();
+}
+
+export default async function Home() {
+  const { data } = await getData();
+
   return (
     <main>
       <table className="table-fixed w-full">
@@ -105,7 +26,7 @@ export default function Home() {
           </tr>
         </thead>
         <tbody>
-          {data.map((data, i) => (
+          {data?.priceList?.map((data, i) => (
             <tr key={data.name} className={i % 2 == 0 ? '' : 'bg-gray-300'}>
               <td className="min-h-16 p-4 border border-t-transparent border-l-transparent border-r-transparent border-b-slate-300">
                 {data.name}
