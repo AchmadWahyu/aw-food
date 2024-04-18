@@ -32,7 +32,7 @@ export default function TableView({ data }: Data) {
           height={20}
         />
         <input
-          className="w-full h-16"
+          className="w-full h-16 focus:outline-none"
           type="text"
           placeholder="cari kue"
           value={filter}
