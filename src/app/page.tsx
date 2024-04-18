@@ -17,6 +17,9 @@ export default async function Home() {
 
   return (
     <main>
+      <div className='bg-yellow-300'>
+        <h1 className="text-xl font-bold text-center">Menu AW Food & Snack</h1>
+      </div>
       <table className="table-fixed w-full">
         <thead className="z-10 sticky top-0 bg-slate-300">
           <tr>
