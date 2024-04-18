@@ -14,7 +14,10 @@ export default function TableView({ data }: Data) {
   });
 
   const filteredResult = useMemo(
-    () => data.priceList.filter((item) => item.name.includes(filter)),
+    () =>
+      data.priceList.filter((item) =>
+        item.name.toLowerCase().includes(filter.toLowerCase())
+      ),
     [data.priceList, filter]
   );
 
