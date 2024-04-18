@@ -23,7 +23,7 @@ export default function TableView({ data }: Data) {
 
   return (
     <>
-      <div className="flex items-center">
+      <div className="flex items-center z-10 sticky top-0 bg-white">
         <Image
           className="basis-5 shrink-0 mx-2"
           src="/icon-search.png"
@@ -51,7 +51,7 @@ export default function TableView({ data }: Data) {
         ) : null}
       </div>
       <table className="table-fixed w-full">
-        <thead className="z-10 sticky top-0 bg-slate-300">
+        <thead className="z-10 sticky top-16 bg-slate-300">
           <tr>
             <th className="p-1">Item</th>
             <th className="p-1">Harga</th>
