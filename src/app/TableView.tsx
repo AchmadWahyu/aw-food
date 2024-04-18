@@ -39,7 +39,7 @@ export default function TableView({ data }: Data) {
           onChange={(e) => setFilter(e.target.value)}
         />
         {filter.length > 0 ? (
-          <button className="p-2" onClick={() => setFilter('')}>
+          <button className="p-5" onClick={() => setFilter('')}>
             <Image
               className="basis-5 shrink-0"
               src="/icon-close.png"
