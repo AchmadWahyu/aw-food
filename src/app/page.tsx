@@ -14,9 +14,8 @@ async function getData(): Promise<Data> {
     );
 
     const result = await response.json();
-    
+
     return JSON.parse(result.files['aw-food-price-list.json'].content);
-    
   } catch (err) {
     console.log('ERR: ', err);
     throw new Error('Failed to fetch data');
@@ -32,6 +31,12 @@ export default async function Home() {
         <h1 className="text-xl font-bold text-center">Menu AW Food & Snack</h1>
       </div>
       <TableView data={result.data} />
+      <footer className="flex justify-center">
+        Icons by&nbsp;
+        <a className="underline" href="https://icons8.com/" target="_blank">
+          Icons8
+        </a>
+      </footer>
     </main>
   );
 }
