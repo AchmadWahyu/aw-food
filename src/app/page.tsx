@@ -15,9 +15,15 @@ async function getData(): Promise<Data> {
 export default async function Home() {
   const { data } = await getData();
 
+  const formatIDR = new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    maximumFractionDigits: 0
+  });
+
   return (
     <main>
-      <div className='bg-yellow-300'>
+      <div className="bg-yellow-300">
         <h1 className="text-xl font-bold text-center">Menu AW Food & Snack</h1>
       </div>
       <table className="table-fixed w-full">
@@ -35,7 +41,7 @@ export default async function Home() {
                 {data.name}
               </td>
               <td className="text-center min-h-16 p-4 border border-t-transparent border-l-transparent border-r-transparent border-b-slate-300">
-                <strong>{data.price}</strong>
+                <strong>{formatIDR.format(data.price)}</strong>
               </td>
               <td className="text-gray-500 text-right min-h-16 p-4 border border-t-transparent border-l-transparent border-r-transparent border-b-slate-300">
                 {data.lastUpdatedDate}

@@ -1,6 +1,6 @@
 type Row = {
   name: string;
-  price: string;
+  price: number;
   lastUpdatedDate: string;
 };
 
