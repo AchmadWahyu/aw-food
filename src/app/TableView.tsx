@@ -35,8 +35,20 @@ export default function TableView({ data }: Data) {
           className="w-full h-16"
           type="text"
           placeholder="cari kue"
+          value={filter}
           onChange={(e) => setFilter(e.target.value)}
         />
+        {filter.length > 0 ? (
+          <button className="p-2" onClick={() => setFilter('')}>
+            <Image
+              className="basis-5 shrink-0"
+              src="/icon-close.png"
+              alt="hapus pencarian"
+              width={20}
+              height={20}
+            />
+          </button>
+        ) : null}
       </div>
       <table className="table-fixed w-full">
         <thead className="z-10 sticky top-0 bg-slate-300">
