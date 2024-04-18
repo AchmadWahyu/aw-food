@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "AW Food & Snack",
   description: "AW Food & Snack website",
+  metadataBase: new URL('https://aw-food.vercel.app')
 };
 
 export default function RootLayout({
