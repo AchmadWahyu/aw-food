@@ -16,7 +16,7 @@ async function getData(): Promise<Data> {
 
     const result = await response.json();
     const data = JSON.parse(result.files['aw-food-price-list.json'].content);
-    console.log('[INFO] fetch data, result: ', data);
+    console.log('[INFO] fetch data, result: ', JSON.stringify(data));
     
     return data
   } catch (err) {
