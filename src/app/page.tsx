@@ -1,5 +1,7 @@
-import TableView from './TableView';
+import dynamic from 'next/dynamic';
 import { Data } from './data.types';
+
+const TableView = dynamic(() => import('./TableView'));
 
 async function getData(): Promise<Data> {
   try {
