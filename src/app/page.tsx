@@ -8,18 +8,19 @@ async function getData(): Promise<Data> {
     const response = await fetch(
       'https://api.github.com/gists/173e65a0667ff93ac35b3961163be27e',
       {
-        cache: 'no-store',
         next: {
-          revalidate: 0,
+          revalidate: 60,
         },
       }
     );
 
     const result = await response.json();
-
-    return JSON.parse(result.files['aw-food-price-list.json'].content);
+    const data = JSON.parse(result.files['aw-food-price-list.json'].content);
+    console.log('[INFO] fetch data, result: ', data);
+    
+    return data
   } catch (err) {
-    console.log('ERR: ', err);
+    console.log('[ERROR]: ', err);
     throw new Error('Failed to fetch data');
   }
 }
