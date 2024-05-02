@@ -5,7 +5,9 @@ type Row = {
 };
 
 export type Data = {
-  data: {
-    priceList: Row[];
-  }
+  priceList: Row[];
+};
+
+export type Response = {
+  data: Data;
 };

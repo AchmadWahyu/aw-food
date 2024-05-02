@@ -1,12 +1,12 @@
 import dynamic from 'next/dynamic';
-import { Response } from './data.types';
+import { Response } from '../data.types';
 
-const TableView = dynamic(() => import('./TableView'));
+const TableView = dynamic(() => import('../TableView'));
 
 async function getData(): Promise<Response> {
   try {
     const response = await fetch(
-      'https://api.github.com/gists/173e65a0667ff93ac35b3961163be27e',
+      'https://api.github.com/gists/133bc4f14ea3d007cd3438e97ad03ccb',
       {
         next: {
           revalidate: 120,
@@ -15,7 +15,9 @@ async function getData(): Promise<Response> {
     );
 
     const result = await response.json();
-    const data = JSON.parse(result.files['aw-food-price-list.json'].content);
+    const data = JSON.parse(
+      result.files['aw-food-packaging-list.json'].content
+    );
     console.log('[INFO] fetch data, result: ', JSON.stringify(data));
 
     return data;
@@ -30,7 +32,7 @@ export default async function Page() {
 
   return (
     <div>
-      <TableView data={result.data} searchPlaceholder="Cari kue" />
+      <TableView data={result.data} searchPlaceholder="Cari kemasan" />
     </div>
   );
 }

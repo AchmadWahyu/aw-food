@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import BottomNav from './navigations/BottomNav';
 
 import './globals.css';
 
@@ -19,8 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} pb-16`}>
+        <div className="bg-yellow-300">
+          <h1 className="text-xl font-bold text-center">
+            Menu AW Food & Snack
+          </h1>
+        </div>
         {children}
+        <BottomNav />
         <SpeedInsights />
       </body>
     </html>

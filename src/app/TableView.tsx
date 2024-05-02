@@ -4,7 +4,12 @@ import { useMemo, useState } from 'react';
 import { Data } from './data.types';
 import Image from 'next/image';
 
-export default function TableView({ data }: Data) {
+type Props = {
+  data: Data;
+  searchPlaceholder: string;
+};
+
+export default function TableView({ data, searchPlaceholder }: Props) {
   const [filter, setFilter] = useState('');
 
   const formatIDR = new Intl.NumberFormat('id-ID', {
@@ -34,7 +39,7 @@ export default function TableView({ data }: Data) {
         <input
           className="w-full h-16 focus:outline-none"
           type="text"
-          placeholder="cari kue"
+          placeholder={searchPlaceholder}
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         />
@@ -53,9 +58,9 @@ export default function TableView({ data }: Data) {
       <table className="table-fixed w-full">
         <thead className="z-10 sticky top-16 bg-slate-300">
           <tr>
-            <th className="p-1">Item</th>
-            <th className="p-1">Harga</th>
-            <th className="p-1">Tanggal diupdate</th>
+            <th className="p-0.5">Item</th>
+            <th className="p-0.5">Harga</th>
+            <th className="p-0.5">Tanggal diupdate</th>
           </tr>
         </thead>
         <tbody>
