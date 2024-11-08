@@ -1,11 +1,11 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { Data } from './data.types';
+import { Snack, Packaging } from './data.types';
 import Image from 'next/image';
 
 type Props = {
-  data: Data;
+  data: Snack[] | Packaging[];
   searchPlaceholder: string;
 };
 
@@ -20,10 +20,10 @@ export default function TableView({ data, searchPlaceholder }: Props) {
 
   const filteredResult = useMemo(
     () =>
-      data.priceList.filter((item) =>
+      data.filter((item) =>
         item.name.toLowerCase().includes(filter.toLowerCase())
       ),
-    [data.priceList, filter]
+    [data, filter]
   );
 
   return (
@@ -73,7 +73,7 @@ export default function TableView({ data, searchPlaceholder }: Props) {
                 <strong>{formatIDR.format(data.price)}</strong>
               </td>
               <td className="text-gray-500 text-right min-h-16 p-4 border border-t-transparent border-l-transparent border-r-transparent border-b-slate-300">
-                {data.lastUpdatedDate}
+                {new Date(data._updatedAt).toLocaleDateString('id-ID')}
               </td>
             </tr>
           ))}

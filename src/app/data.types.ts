@@ -1,13 +1,27 @@
-type Row = {
+export type Snack = {
   name: string;
   price: number;
-  lastUpdatedDate: string;
+  tag: string[];
+  _updatedAt: string;
 };
 
-export type Data = {
-  priceList: Row[];
+export type Packaging = {
+  name: string;
+  price: number;
+  tag: string[];
+  _updatedAt: string;
 };
 
-export type Response = {
-  data: Data;
+export type AllSnackResponse = {
+  allItems: Snack[];
+  _allItemsMeta: {
+    count: number;
+  };
+};
+
+export type AllPackagingsResponse = {
+  allPackagings: Packaging[];
+  _allItemsMeta: {
+    count: number;
+  };
 };
