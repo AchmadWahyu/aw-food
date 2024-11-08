@@ -1,5 +1,3 @@
-import dynamic from 'next/dynamic';
-import { Response } from '../data.types';
 import Link from 'next/link';
 
 export default async function Page() {
