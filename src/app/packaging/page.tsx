@@ -1,38 +1,35 @@
 import dynamic from 'next/dynamic';
-import { Response } from '../data.types';
+import { executeQuery } from '@datocms/cda-client';
+import type { AllPackagingsResponse } from '../data.types';
+import { DATOCMS_API_TOKEN } from '../config';
 
 const TableView = dynamic(() => import('../TableView'));
 
-async function getData(): Promise<Response> {
-  try {
-    const response = await fetch(
-      'https://api.github.com/gists/133bc4f14ea3d007cd3438e97ad03ccb',
-      {
-        next: {
-          revalidate: 120,
-        },
-      }
-    );
-
-    const result = await response.json();
-    const data = JSON.parse(
-      result.files['aw-food-packaging-list.json'].content
-    );
-    console.log('[INFO] fetch data, result: ', JSON.stringify(data));
-
-    return data;
-  } catch (err) {
-    console.log('[ERROR]: ', err);
-    throw new Error('Failed to fetch data');
+const query = `
+{
+  allPackagings(first: 100, skip: 0) {
+    id
+    name
+    price
+    _updatedAt
   }
 }
+`;
 
 export default async function Page() {
-  const result = await getData();
+  if (!DATOCMS_API_TOKEN)
+    throw new Error('NEXT_PUBLIC_DATOCMS_API_TOKEN is not set');
+
+  const response: AllPackagingsResponse = await executeQuery(query, {
+    token: DATOCMS_API_TOKEN,
+  });
 
   return (
     <div>
-      <TableView data={result.data} searchPlaceholder="Cari kemasan" />
+      <TableView
+        data={response.allPackagings}
+        searchPlaceholder="Cari kemasan"
+      />
     </div>
   );
 }
