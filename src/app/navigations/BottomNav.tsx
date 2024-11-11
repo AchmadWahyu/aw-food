@@ -1,11 +1,16 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function BottomNav() {
   const pathname = usePathname();
+  const [allParams, setAllParams] = useState('');
+  useEffect(() => {
+    setAllParams(window?.location?.search);
+  }, []);
 
   const snackMenu = pathname === '/';
   const packagingMenu = pathname === '/packaging';
@@ -13,7 +18,10 @@ export default function BottomNav() {
 
   return (
     <footer className="flex fixed bottom-0 bg-white w-full shadow-2xl">
-      <Link href="/" className="w-full flex flex-col items-center py-3">
+      <Link
+        href={`/${allParams}`}
+        className="w-full flex flex-col items-center py-3"
+      >
         <Image
           className="basis-5 shrink-0 mx-2"
           src={snackMenu ? '/icon-snack-fill.png' : '/icon-snack.png'}
@@ -30,7 +38,7 @@ export default function BottomNav() {
         </p>
       </Link>
       <Link
-        href="/packaging"
+        href={`/packaging${allParams}`}
         className="w-full flex flex-col items-center py-3"
       >
         <Image
@@ -50,7 +58,10 @@ export default function BottomNav() {
           List Kemasan
         </p>
       </Link>
-      <Link href="/order" className="w-full flex flex-col items-center py-3">
+      <Link
+        href={`/order${allParams}`}
+        className="w-full flex flex-col items-center py-3"
+      >
         <Image
           className="basis-5 shrink-0 mx-2"
           src={orderMenu ? '/icon-order-fill.png' : '/icon-order.png'}
