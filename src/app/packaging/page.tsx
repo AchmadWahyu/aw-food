@@ -22,6 +22,9 @@ export default async function Page() {
 
   const response: AllPackagingsResponse = await executeQuery(query, {
     token: DATOCMS_API_TOKEN,
+    requestInitOptions: {
+      next: { revalidate: 60 },
+    },
   });
 
   return (
