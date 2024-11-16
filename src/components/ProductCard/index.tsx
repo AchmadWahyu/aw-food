@@ -39,7 +39,7 @@ export const ProductCard = ({
           <span
             className={cn(
               type === 'salted' ? 'bg-amber-400' : 'bg-rose-400',
-              'text-white p-1 px-2 rounded-full text-xs absolute top-2 right-2'
+              'text-white p-1 px-2 rounded-full text-xs absolute top-2 left-2'
             )}
           >
             {FLAVOUR_TEXT[type]}

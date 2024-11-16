@@ -32,7 +32,6 @@ export default function RootLayout({
             Menu AW Food & Snack
           </h1>
         </div>
-        <ShareButton />
 
         {children}
 

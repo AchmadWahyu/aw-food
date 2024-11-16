@@ -14,7 +14,7 @@ export const ShareButton = () => {
       `${origin}${pathname}?utm_source=share-button&utm_medium=web`
     );
 
-    window.navigator.clipboard.writeText(shareUrl.toString());
+    window.navigator?.clipboard?.writeText(shareUrl?.toString());
 
     toast({
       title: 'Link web tersalin!',
