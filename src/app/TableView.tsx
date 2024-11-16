@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import { Snack, Packaging } from './data.types';
 import Image from 'next/image';
+import { formatIDR } from '@/lib/utils';
 
 type Props = {
   data: Snack[] | Packaging[];
@@ -11,12 +12,6 @@ type Props = {
 
 export default function TableView({ data, searchPlaceholder }: Props) {
   const [filter, setFilter] = useState('');
-
-  const formatIDR = new Intl.NumberFormat('id-ID', {
-    style: 'currency',
-    currency: 'IDR',
-    maximumFractionDigits: 0,
-  });
 
   const filteredResult = useMemo(
     () =>

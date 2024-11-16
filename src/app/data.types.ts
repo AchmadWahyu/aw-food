@@ -1,9 +1,17 @@
 export type Snack = {
+  id: number;
   name: string;
   price: number;
-  tag: string[];
+  images: Image[];
+  tag: SnackFlavour[];
   _updatedAt: string;
 };
+
+export type Image = {
+  url: string;
+};
+
+export type SnackFlavour = 'sweet' | 'salted';
 
 export type Packaging = {
   name: string;
