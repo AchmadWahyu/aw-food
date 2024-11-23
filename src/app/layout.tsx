@@ -8,7 +8,6 @@ import BottomNav from './navigations/BottomNav';
 
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
-import { ShareButton } from './navigations/ShareButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,10 +28,9 @@ export default function RootLayout({
       <body className={`${inter.className} pb-16`}>
         <div className="bg-yellow-300">
           <h1 className="text-xl font-bold text-center">
-            Menu AW Food & Snack
+            AW Food & Snack
           </h1>
         </div>
-        <ShareButton />
 
         {children}
 
