@@ -60,6 +60,14 @@ export default async function Page({
       <div className="p-8">
         <div className="flex justify-between">
           <p className="mb-4 font-bold text-4xl text-slate-900">{snack.name}</p>
+          <Button
+            type="button"
+            variant="outline"
+            className="rounded-full"
+            size="default"
+          >
+            <Heart />
+          </Button>
         </div>
         <div className="flex items-center mb-6">
           <p className="font-semibold text-xl text-slate-500">
