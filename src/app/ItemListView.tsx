@@ -44,7 +44,7 @@ const ItemListView = ({ data }: { data: Snack[] }) => {
           <ProductCard
             key={item.name}
             imgUrl={item.images?.[0]?.url}
-            linkUrl={`/snack/${item.id}`}
+            linkUrl={`/snack/${item.slug}`}
             price={item.price}
             title={item.name}
             type={item.tag?.[0]}

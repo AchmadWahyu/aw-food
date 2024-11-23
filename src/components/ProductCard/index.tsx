@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { cn, formatIDR } from '@/lib/utils';
+import { FLAVOUR_TEXT, cn, formatIDR } from '@/lib/utils';
 import { SnackFlavour } from '@/app/data.types';
-import fallbackImg from './assets/panada_sad.png';
+import fallbackImg from '@/assets/panada_sad.png';
 
 type ProductCardProps = {
   linkUrl: string;
@@ -11,11 +11,6 @@ type ProductCardProps = {
   imgUrl?: string;
   title: string;
   price: number;
-};
-
-const FLAVOUR_TEXT = {
-  salted: 'Asin',
-  sweet: 'Manis',
 };
 
 export const ProductCard = ({

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { ToastAction } from '@/components/ui/toast';
 
-export const ShareButton = () => {
+export const ShareButton = ({ className }: { className?: string }) => {
   const { toast, dismiss } = useToast();
 
   const copyLink = () => {
@@ -29,8 +29,10 @@ export const ShareButton = () => {
   return (
     <Button
       onClick={copyLink}
-      className="fixed top-3 right-3 z-50"
+      className={className}
+      type="button"
       variant="outline"
+      size="default"
     >
       <Link />
     </Button>

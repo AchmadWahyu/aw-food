@@ -1,9 +1,11 @@
 export type Snack = {
   id: number;
   name: string;
+  description: string;
   price: number;
-  images: Image[];
   tag: SnackFlavour[];
+  slug: string;
+  images: Image[];
   _updatedAt: string;
 };
 
@@ -25,6 +27,10 @@ export type AllSnackResponse = {
   _allItemsMeta: {
     count: number;
   };
+};
+
+export type SnackResponse = {
+  item: Snack;
 };
 
 export type AllPackagingsResponse = {

@@ -10,3 +10,8 @@ export const formatIDR = new Intl.NumberFormat('id-ID', {
   currency: 'IDR',
   maximumFractionDigits: 0,
 });
+
+export const FLAVOUR_TEXT = {
+  salted: 'Asin',
+  sweet: 'Manis',
+};

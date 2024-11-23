@@ -12,6 +12,7 @@ const query = `
     images {
       url
     }
+    slug
     tag
     _updatedAt
   }
