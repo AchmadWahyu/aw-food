@@ -3,11 +3,15 @@
 import { ProductCard } from '@/components/ProductCard';
 import { Snack } from './data.types';
 import { Input } from '@/components/ui/input';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { X } from 'lucide-react';
 
 const ItemListView = ({ data }: { data: Snack[] }) => {
   const [filter, setFilter] = useState('');
+  const [allParams, setAllParams] = useState('');
+  useEffect(() => {
+    setAllParams(window?.location?.search);
+  }, []);
 
   const filteredResult = useMemo(
     () =>
@@ -44,7 +48,7 @@ const ItemListView = ({ data }: { data: Snack[] }) => {
           <ProductCard
             key={item.name}
             imgUrl={item.images?.[0]?.url}
-            linkUrl={`/snack/${item.slug}`}
+            linkUrl={`/snack/${item.slug}${allParams}`}
             price={item.price}
             title={item.name}
             type={item.tag?.[0]}
