@@ -35,7 +35,7 @@ export default async function Page({
     {
       token: DATOCMS_API_TOKEN,
       requestInitOptions: {
-        next: { revalidate: 60 },
+        next: { revalidate: 300 },
       },
     }
   );

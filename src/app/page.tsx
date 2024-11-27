@@ -26,7 +26,7 @@ export default async function Page() {
   const response: AllSnackResponse = await executeQuery(query, {
     token: DATOCMS_API_TOKEN,
     requestInitOptions: {
-      next: { revalidate: 60 },
+      next: { revalidate: 300 },
     },
   });
 
