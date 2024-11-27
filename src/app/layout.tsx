@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/react';
 import BottomNav from './navigations/BottomNav';
 
@@ -24,7 +23,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleAnalytics gaId="G-7764V69PCM" />
       <body className={`${inter.className} pb-16`}>
         <div className="bg-yellow-300">
           <h1 className="text-xl font-bold text-center">
