@@ -22,13 +22,14 @@ export const ProductCard = ({
 }: ProductCardProps) => (
   <Link href={linkUrl} className="flex flex-col w-full h-full m-auto">
     <Card className="bg-neutral-100 border-neutral-100 flex-grow mb-2 hover:bg-amber-300 hover:border-amber-300 transition ease-in-out duration-250">
-      <CardContent className="relative h-full min-h-[50vw] flex justify-center items-center">
+      <CardContent className="relative h-full min-h-[50vw] flex justify-center items-center p-3">
         <Image
           className="rounded-xl"
           alt={title}
           src={imgUrl || fallbackImg}
-          width={100}
-          height={100}
+          width={200}
+          height={200}
+          style={{ width: '200px', height: 'auto' }}
         />
         {type && (
           <span

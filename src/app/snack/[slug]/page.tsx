@@ -48,10 +48,12 @@ export default async function Page({
     <div>
       <div className="w-full relative h-[75vw]">
         <Image
-          className="object-contain bg-neutral-100"
+          className="object-contain bg-neutral-100 absolute w-full h-full"
           src={snack.images?.[0]?.url || fallbackImg}
           alt={snack.name}
-          layout="fill"
+          height={225}
+          width={300}
+          priority
         />
 
         <NavBar />
