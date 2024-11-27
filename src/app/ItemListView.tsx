@@ -44,7 +44,7 @@ const ItemListView = ({ data }: { data: Snack[] }) => {
       </div>
 
       <div className="grid grid-cols-2 gap-4">
-        {filteredResult.map((item) => (
+        {filteredResult.map((item, index) => (
           <ProductCard
             key={item.name}
             imgUrl={item.images?.[0]?.url}
@@ -52,6 +52,8 @@ const ItemListView = ({ data }: { data: Snack[] }) => {
             price={item.price}
             title={item.name}
             type={item.tag?.[0]}
+            // eager load first 4 cards
+            eager={index < 4}
           />
         ))}
       </div>

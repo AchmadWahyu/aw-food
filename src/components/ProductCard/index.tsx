@@ -11,6 +11,7 @@ type ProductCardProps = {
   imgUrl?: string;
   title: string;
   price: number;
+  eager?: boolean;
 };
 
 export const ProductCard = ({
@@ -19,6 +20,7 @@ export const ProductCard = ({
   imgUrl,
   title,
   price,
+  eager,
 }: ProductCardProps) => (
   <Link href={linkUrl} className="flex flex-col w-full h-full m-auto">
     <Card className="bg-neutral-100 border-neutral-100 flex-grow mb-2 hover:bg-amber-300 hover:border-amber-300 transition ease-in-out duration-250">
@@ -29,6 +31,7 @@ export const ProductCard = ({
           src={imgUrl || fallbackImg}
           width={200}
           height={200}
+          loading={eager ? 'eager' : 'lazy'}
           style={{ width: '200px', height: 'auto' }}
         />
         {type && (
