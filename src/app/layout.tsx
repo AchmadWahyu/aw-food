@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} pb-16`}>
+      <body className={`${inter.className} pb-16 max-w-lg mx-auto`}>
         <div className="bg-yellow-300">
           <h1 className="text-xl font-bold text-center">
             AW Food & Snack

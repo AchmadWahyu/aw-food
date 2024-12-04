@@ -17,7 +17,7 @@ export default function BottomNav() {
   const orderMenu = pathname === '/order';
 
   return (
-    <footer className="flex fixed bottom-0 bg-white w-full shadow-2xl">
+    <footer className="flex fixed bottom-0 bg-white w-full shadow-2xl max-w-lg mx-auto">
       <Link
         href={`/${allParams}`}
         className="w-full flex flex-col items-center py-3"
