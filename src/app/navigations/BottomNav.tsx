@@ -19,6 +19,7 @@ export default function BottomNav() {
   return (
     <footer className="flex fixed bottom-0 bg-white w-full shadow-2xl max-w-lg mx-auto">
       <Link
+        prefetch
         href={`/${allParams}`}
         className="w-full flex flex-col items-center py-3"
       >
@@ -38,6 +39,7 @@ export default function BottomNav() {
         </p>
       </Link>
       <Link
+        prefetch
         href={`/packaging${allParams}`}
         className="w-full flex flex-col items-center py-3"
       >
@@ -59,13 +61,14 @@ export default function BottomNav() {
         </p>
       </Link>
       <Link
+        prefetch
         href={`/order${allParams}`}
         className="w-full flex flex-col items-center py-3"
       >
         <Image
           className="basis-5 shrink-0 mx-2"
           src={orderMenu ? '/icon-order-fill.png' : '/icon-order.png'}
-          alt="list kemasan"
+          alt="Pesan"
           width={36}
           height={36}
         />
