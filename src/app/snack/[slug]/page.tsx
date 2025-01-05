@@ -47,14 +47,16 @@ export default async function Page({
   return (
     <div>
       <div className="w-full relative h-[75vw]">
-        <Image
-          className="object-contain bg-neutral-100 absolute w-full h-full"
-          src={snack.images?.[0]?.url || fallbackImg}
-          alt={snack.name}
-          height={225}
-          width={300}
-          priority
-        />
+        <a href={snack.images?.[0]?.url} target="_blank">
+          <Image
+            className="object-contain bg-neutral-100 absolute w-full h-full"
+            src={snack.images?.[0]?.url || fallbackImg}
+            alt={snack.name}
+            height={225}
+            width={300}
+            priority
+          />
+        </a>
 
         <NavBar />
       </div>
