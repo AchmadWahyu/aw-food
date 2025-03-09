@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import PageContent from './PageContent';
-import PageContentSkeleton from './PageContentSkeleton';
+import PageContentSkeleton from './loading';
 
 export default async function Page({
   params,
@@ -9,9 +9,5 @@ export default async function Page({
 }) {
   const slug = (await params).slug;
 
-  return (
-    <Suspense fallback={<PageContentSkeleton />}>
-      <PageContent slug={slug} />
-    </Suspense>
-  );
+  return <PageContent slug={slug} />;
 }
