@@ -30,9 +30,5 @@ export default async function Page() {
     },
   });
 
-  return (
-    <div className="p-4">
-      <ItemListView data={response.allItems} />
-    </div>
-  );
+  return <ItemListView data={response.allItems} />;
 }

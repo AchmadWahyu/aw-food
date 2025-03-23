@@ -3,8 +3,10 @@
 import { ProductCard } from '@/components/ProductCard';
 import { Snack } from './data.types';
 import { Input } from '@/components/ui/input';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useTransition } from 'react';
 import { X } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import PageContentSkeleton from './snack/[slug]/loading';
 
 const ItemListView = ({ data }: { data: Snack[] }) => {
   const [filter, setFilter] = useState('');
@@ -12,6 +14,14 @@ const ItemListView = ({ data }: { data: Snack[] }) => {
   useEffect(() => {
     setAllParams(window?.location?.search);
   }, []);
+
+  const [isPending, startTransition] = useTransition();
+
+  const router = useRouter();
+
+  const handleClick = (linkUrl: string) => {
+    router.push(linkUrl);
+  };
 
   const filteredResult = useMemo(
     () =>
@@ -21,8 +31,12 @@ const ItemListView = ({ data }: { data: Snack[] }) => {
     [data, filter]
   );
 
+  if (isPending) {
+    return <PageContentSkeleton />;
+  }
+
   return (
-    <div>
+    <div className="p-4">
       <div className="z-10 sticky top-0 bg-white py-2">
         <div className="relative">
           <Input
@@ -46,9 +60,13 @@ const ItemListView = ({ data }: { data: Snack[] }) => {
       <div className="grid grid-cols-2 gap-4">
         {filteredResult.map((item, index) => (
           <ProductCard
+            onClick={() => {
+              startTransition(() => {
+                handleClick(`/snack/${item.slug}${allParams}`);
+              });
+            }}
             key={item.name}
             imgUrl={item.images?.[0]?.url}
-            linkUrl={`/snack/${item.slug}${allParams}`}
             price={item.price}
             title={item.name}
             type={item.tag?.[0]}
