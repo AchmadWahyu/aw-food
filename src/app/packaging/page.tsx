@@ -17,22 +17,37 @@ const query = `
 `;
 
 export default async function Page() {
-  if (!DATOCMS_API_TOKEN)
-    throw new Error('NEXT_PUBLIC_DATOCMS_API_TOKEN is not set');
+  if (!DATOCMS_API_TOKEN) {
+    console.warn('DATOCMS_API_TOKEN is not set. Rendering empty table.');
+    return (
+      <div>
+        <TableView data={[]} searchPlaceholder="Cari kemasan" />
+      </div>
+    );
+  }
 
-  const response: AllPackagingsResponse = await executeQuery(query, {
-    token: DATOCMS_API_TOKEN,
-    requestInitOptions: {
-      next: { revalidate: 300 },
-    },
-  });
+  try {
+    const response: AllPackagingsResponse = await executeQuery(query, {
+      token: DATOCMS_API_TOKEN,
+      requestInitOptions: {
+        next: { revalidate: 300 },
+      },
+    });
 
-  return (
-    <div>
-      <TableView
-        data={response.allPackagings}
-        searchPlaceholder="Cari kemasan"
-      />
-    </div>
-  );
+    return (
+      <div>
+        <TableView
+          data={response.allPackagings}
+          searchPlaceholder="Cari kemasan"
+        />
+      </div>
+    );
+  } catch (error) {
+    console.error('Failed to fetch packaging data.', error);
+    return (
+      <div>
+        <TableView data={[]} searchPlaceholder="Cari kemasan" />
+      </div>
+    );
+  }
 }

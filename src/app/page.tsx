@@ -20,15 +20,22 @@ const query = `
 `;
 
 export default async function Page() {
-  if (!DATOCMS_API_TOKEN)
-    throw new Error('NEXT_PUBLIC_DATOCMS_API_TOKEN is not set');
+  if (!DATOCMS_API_TOKEN) {
+    console.warn('DATOCMS_API_TOKEN is not set. Rendering empty list.');
+    return <ItemListView data={[]} />;
+  }
 
-  const response: AllSnackResponse = await executeQuery(query, {
-    token: DATOCMS_API_TOKEN,
-    requestInitOptions: {
-      next: { revalidate: 300 },
-    },
-  });
+  try {
+    const response: AllSnackResponse = await executeQuery(query, {
+      token: DATOCMS_API_TOKEN,
+      requestInitOptions: {
+        next: { revalidate: 300 },
+      },
+    });
 
-  return <ItemListView data={response.allItems} />;
+    return <ItemListView data={response.allItems} />;
+  } catch (error) {
+    console.error('Failed to fetch initial data.', error);
+    return <ItemListView data={[]} />;
+  }
 }

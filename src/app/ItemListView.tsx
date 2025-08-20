@@ -3,10 +3,9 @@
 import { ProductCard } from '@/components/ProductCard';
 import { Snack } from './data.types';
 import { Input } from '@/components/ui/input';
-import { useEffect, useMemo, useState, useTransition } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { X } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import PageContentSkeleton from './snack/[slug]/loading';
 
 const ItemListView = ({ data }: { data: Snack[] }) => {
   const [filter, setFilter] = useState('');
@@ -14,8 +13,6 @@ const ItemListView = ({ data }: { data: Snack[] }) => {
   useEffect(() => {
     setAllParams(window?.location?.search);
   }, []);
-
-  const [isPending, startTransition] = useTransition();
 
   const router = useRouter();
 
@@ -30,10 +27,6 @@ const ItemListView = ({ data }: { data: Snack[] }) => {
       ),
     [data, filter]
   );
-
-  if (isPending) {
-    return <PageContentSkeleton />;
-  }
 
   return (
     <div className="p-4">
@@ -61,9 +54,7 @@ const ItemListView = ({ data }: { data: Snack[] }) => {
         {filteredResult.map((item, index) => (
           <ProductCard
             onClick={() => {
-              startTransition(() => {
-                handleClick(`/snack/${item.slug}${allParams}`);
-              });
+              handleClick(`/snack/${item.slug}${allParams}`);
             }}
             key={item.name}
             imgUrl={item.images?.[0]?.url}
