@@ -12,23 +12,23 @@ type AddItemSheetProps = {
   onClose: () => void;
 };
 
-export default function AddItemSheet({ item, onClose }: AddItemSheetProps) {
+function AddItemSheetInner({
+  item,
+  onClose,
+}: {
+  item: Snack;
+  onClose: () => void;
+}) {
   const [quantity, setQuantity] = useState(1);
   const [notes, setNotes] = useState('');
   const { addItem } = useOrder();
 
   useEffect(() => {
-    if (item) {
-      setQuantity(1);
-      setNotes('');
-      document.body.style.overflow = 'hidden';
-    }
+    document.body.style.overflow = 'hidden';
     return () => {
       document.body.style.overflow = '';
     };
-  }, [item]);
-
-  if (!item) return null;
+  }, []);
 
   const handleAdd = () => {
     addItem({
@@ -137,4 +137,9 @@ export default function AddItemSheet({ item, onClose }: AddItemSheetProps) {
       </div>
     </div>
   );
+}
+
+export default function AddItemSheet({ item, onClose }: AddItemSheetProps) {
+  if (!item) return null;
+  return <AddItemSheetInner key={item.id} item={item} onClose={onClose} />;
 }

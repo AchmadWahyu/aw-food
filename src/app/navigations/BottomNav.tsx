@@ -1,16 +1,15 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Suspense } from 'react';
 import { Cookie, Package } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 
-export default function BottomNav() {
+function BottomNavInner() {
   const pathname = usePathname();
-  const [allParams, setAllParams] = useState('');
-  useEffect(() => {
-    setAllParams(window?.location?.search);
-  }, []);
+  const searchParams = useSearchParams();
+  const qs = searchParams.toString();
+  const allParams = qs ? `?${qs}` : '';
 
   const snackMenu = pathname === '/';
   const packagingMenu = pathname === '/packaging';
@@ -54,5 +53,13 @@ export default function BottomNav() {
         </span>
       </Link>
     </footer>
+  );
+}
+
+export default function BottomNav() {
+  return (
+    <Suspense fallback={null}>
+      <BottomNavInner />
+    </Suspense>
   );
 }
