@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Snack, SnackFlavour } from './data.types';
 import { Search, SearchX, X } from 'lucide-react';
 import HeroSection from '@/components/HeroSection';
@@ -9,14 +10,13 @@ import CategoryFilter from '@/components/CategoryFilter';
 import { ProductCard } from '@/components/ProductCard';
 import LocationSection from '@/components/LocationSection';
 
-const ItemListView = ({ data }: { data: Snack[] }) => {
+export default function ItemListView({ data }: { data: Snack[] }) {
+  const searchParams = useSearchParams();
+  const qs = searchParams.toString();
+  const allParams = qs ? `?${qs}` : '';
+
   const [searchFilter, setSearchFilter] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('');
-  const [allParams, setAllParams] = useState('');
-
-  useEffect(() => {
-    setAllParams(window?.location?.search);
-  }, []);
 
   const filteredResult = useMemo(() => {
     let results = data;
@@ -64,7 +64,7 @@ const ItemListView = ({ data }: { data: Snack[] }) => {
       <HeroSection />
 
       {/* Paket Hemat */}
-      {/* <PaketHemat /> */}
+      <PaketHemat />
 
       {/* Divider */}
       <div className="h-px bg-warm-border-strong mx-4 my-2" />
@@ -109,6 +109,4 @@ const ItemListView = ({ data }: { data: Snack[] }) => {
       <div className="h-20" />
     </div>
   );
-};
-
-export default ItemListView;
+}
