@@ -124,11 +124,19 @@ export function OrderProvider({ children }: { children: ReactNode }) {
   );
 
   const generateWhatsAppUrl = useCallback(() => {
-    const lines = state.items.map(
-      (i) =>
-        `- ${i.name} ${i.quantity} pcs${i.notes ? ` (${i.notes})` : ''}`
-    );
-    const message = `Halo, saya mau pesan:\n${lines.join('\n')}\n\nTotal: ${formatIDR.format(totalPrice)}`;
+    const body = state.items
+      .map((i, idx) => {
+        const subtotal = i.price * i.quantity;
+        const main = `${idx + 1}. ${i.name} × ${i.quantity} — ${formatIDR.format(subtotal)}`;
+        const noteLine = i.notes.trim()
+          ? `\n   📝 ${i.notes.trim()}`
+          : '';
+        return main + noteLine;
+      })
+      .join('\n');
+
+    const message = `Halo! Saya ingin memesan:\n${body}\n──────────\n*Total:* ${formatIDR.format(totalPrice)}\nTerima kasih`;
+
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   }, [state.items, totalPrice]);
 
