@@ -1,85 +1,65 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
+import { Suspense } from 'react';
+import { Cookie, Package } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 
-export default function BottomNav() {
+function BottomNavInner() {
   const pathname = usePathname();
-  const [allParams, setAllParams] = useState('');
-  useEffect(() => {
-    setAllParams(window?.location?.search);
-  }, []);
+  const searchParams = useSearchParams();
+  const qs = searchParams.toString();
+  const allParams = qs ? `?${qs}` : '';
 
   const snackMenu = pathname === '/';
   const packagingMenu = pathname === '/packaging';
-  const orderMenu = pathname === '/order';
 
   return (
-    <footer className="flex fixed bottom-0 bg-white w-full shadow-2xl max-w-lg mx-auto">
+    <footer className="flex fixed bottom-0 left-0 right-0 bg-white border-t border-warm-border z-20 max-w-2xl mx-auto">
       <Link
         prefetch
         href={`/${allParams}`}
-        className="w-full flex flex-col items-center py-3"
+        className={`w-full flex flex-col items-center py-2.5 gap-0.5 transition-colors ${
+          snackMenu ? 'text-warm-primary' : 'text-warm-text-muted'
+        }`}
       >
-        <Image
-          className="basis-5 shrink-0 mx-2"
-          src={snackMenu ? '/icon-snack-fill.png' : '/icon-snack.png'}
-          alt="list kue"
-          width={36}
-          height={36}
+        <Cookie
+          className="shrink-0"
+          size={28}
+          strokeWidth={snackMenu ? 2.5 : 1.5}
         />
-        <p
-          className={
-            snackMenu ? 'text-sm font-bold text-orange-400' : 'text-sm'
-          }
+        <span
+          className={`text-xs ${snackMenu ? 'font-bold' : 'font-medium'}`}
         >
-          List Kue
-        </p>
+          Menu
+        </span>
       </Link>
       <Link
         prefetch
         href={`/packaging${allParams}`}
-        className="w-full flex flex-col items-center py-3"
+        className={`w-full flex flex-col items-center py-2.5 gap-0.5 transition-colors ${
+          packagingMenu ? 'text-warm-primary' : 'text-warm-text-muted'
+        }`}
       >
-        <Image
-          className="basis-5 shrink-0 mx-2"
-          src={
-            packagingMenu ? '/icon-packaging-fill.png' : '/icon-packaging.png'
-          }
-          alt="list kemasan"
-          width={36}
-          height={36}
+        <Package
+          className="shrink-0"
+          size={28}
+          strokeWidth={packagingMenu ? 2.5 : 1.5}
         />
-        <p
-          className={
-            packagingMenu ? 'text-sm font-bold text-orange-400' : 'text-sm'
-          }
+        <span
+          className={`text-xs ${packagingMenu ? 'font-bold' : 'font-medium'}`}
         >
-          List Kemasan
-        </p>
-      </Link>
-      <Link
-        prefetch
-        href={`/order${allParams}`}
-        className="w-full flex flex-col items-center py-3"
-      >
-        <Image
-          className="basis-5 shrink-0 mx-2"
-          src={orderMenu ? '/icon-order-fill.png' : '/icon-order.png'}
-          alt="Pesan"
-          width={36}
-          height={36}
-        />
-        <p
-          className={
-            orderMenu ? 'text-sm font-bold text-orange-400' : 'text-sm'
-          }
-        >
-          Pesan
-        </p>
+          Kemasan
+        </span>
       </Link>
     </footer>
+  );
+}
+
+export default function BottomNav() {
+  return (
+    <Suspense fallback={null}>
+      <BottomNavInner />
+    </Suspense>
   );
 }
