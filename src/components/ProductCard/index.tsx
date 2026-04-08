@@ -93,37 +93,38 @@ export const ProductCard = ({
         </div>
       </Link>
 
-      <div className="p-3 pt-2 mt-auto flex items-center justify-between gap-2">
+      <div className="mt-auto flex flex-col gap-2 p-3 pt-2">
         <p className="font-bold text-warm-primary text-sm">
           {formatIDR.format(price)}
         </p>
-
-        {qty > 0 ? (
-          <div className="flex items-center gap-1.5">
+        <div className="flex">
+          {qty > 0 ? (
+            <div className="flex items-center gap-1.5">
+              <button
+                onClick={() => updateQuantity(id, qty - 1)}
+                className="flex h-7 w-7 items-center justify-center rounded-full border border-warm-border transition-colors hover:bg-warm-bg"
+              >
+                <Minus className="h-3 w-3 text-warm-text" />
+              </button>
+              <span className="w-5 text-center text-xs font-bold text-warm-text">
+                {qty}
+              </span>
+              <button
+                onClick={() => updateQuantity(id, qty + 1)}
+                className="flex h-7 w-7 items-center justify-center rounded-full bg-warm-primary transition-colors hover:bg-warm-primary-hover"
+              >
+                <Plus className="h-3 w-3 text-white" />
+              </button>
+            </div>
+          ) : (
             <button
-              onClick={() => updateQuantity(id, qty - 1)}
-              className="w-7 h-7 rounded-full border border-warm-border flex items-center justify-center hover:bg-warm-bg transition-colors"
+              onClick={handleAdd}
+              className="rounded-full bg-warm-primary px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-warm-primary-hover"
             >
-              <Minus className="w-3 h-3 text-warm-text" />
+              Order
             </button>
-            <span className="w-5 text-center text-xs font-bold text-warm-text">
-              {qty}
-            </span>
-            <button
-              onClick={() => updateQuantity(id, qty + 1)}
-              className="w-7 h-7 rounded-full bg-warm-primary flex items-center justify-center hover:bg-warm-primary-hover transition-colors"
-            >
-              <Plus className="w-3 h-3 text-white" />
-            </button>
-          </div>
-        ) : (
-          <button
-            onClick={handleAdd}
-            className="bg-warm-primary text-white text-xs font-semibold px-3 py-1.5 rounded-full hover:bg-warm-primary-hover transition-colors"
-          >
-            Order
-          </button>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );

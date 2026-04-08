@@ -19,7 +19,7 @@ export default function FloatingOrderBar({
   if (totalItems === 0 || isDetailPage) return null;
 
   return (
-    <div className="fixed left-0 right-0 z-25 px-4 pb-2 max-w-2xl mx-auto bottom-[60px]">
+    <div className="fixed left-0 right-0 z-25 px-4 pb-3 max-w-2xl mx-auto bottom-[60px]">
       <button
         onClick={onViewOrder}
         className="w-full bg-warm-primary text-white rounded-2xl px-4 py-3 flex items-center justify-between shadow-lg hover:bg-warm-primary-hover transition-colors"
@@ -31,7 +31,7 @@ export default function FloatingOrderBar({
               {totalItems}
             </span>
           </div>
-          <div className="text-left">
+          <div className="text-left mx-2">
             <span className="block text-xs text-white/80">
               {totalQuantity} item dipilih
             </span>
