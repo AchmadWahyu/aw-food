@@ -101,6 +101,7 @@ export const ProductCard = ({
           {qty > 0 ? (
             <div className="flex items-center gap-1.5">
               <button
+                aria-label={`Decrease quantity for ${title}`}
                 onClick={() => updateQuantity(id, qty - 1)}
                 className="flex h-7 w-7 items-center justify-center rounded-full border border-warm-border transition-colors hover:bg-warm-bg"
               >
@@ -110,6 +111,7 @@ export const ProductCard = ({
                 {qty}
               </span>
               <button
+                aria-label={`Increase quantity for ${title}`}
                 onClick={() => updateQuantity(id, qty + 1)}
                 className="flex h-7 w-7 items-center justify-center rounded-full bg-warm-primary transition-colors hover:bg-warm-primary-hover"
               >
