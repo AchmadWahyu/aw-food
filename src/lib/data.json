@@ -1,0 +1,778 @@
+[
+ {
+  "id": "UUyBo-_zQ8SeaRoC0u4MAQ",
+  "name": "Pastel",
+  "price": 3000,
+  "description": "Pastel renyah dengan isian kentang dan wortel yang gurih dan lembut. Pas banget buat camilan santai kapan saja.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1733328797-pastel.png"
+   }
+  ],
+  "slug": "pastel",
+  "tag": ["salted", "fried"],
+  "_updatedAt": "2024-12-04T16:13:50+00:00"
+ },
+ {
+  "id": "MnYTaIEMQwiFWpkH9rh_Hg",
+  "name": "Risoles Mayonaise",
+  "price": 4000,
+  "description": "Risoles isi smoke beef, telur, dan mayonnaise yang creamy. Dibalut tepung roti dan digoreng sampai renyah, dengan ukuran yang lebih besar dan lebih puas.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1733328740-risol_mayo.png"
+   }
+  ],
+  "slug": "risol-mayonaise",
+  "tag": ["salted", "fried"],
+  "_updatedAt": "2024-12-04T16:12:35+00:00"
+ },
+ {
+  "id": "X_DPfhClTzemP_ZjCTEi_g",
+  "name": "Risoles Mayonaise Pedas",
+  "price": 4000,
+  "description": "Risoles creamy dengan isian smoke beef dan telur, ditambah sensasi pedas yang bikin makin nikmat. Cocok buat kamu yang suka camilan gurih pedas.",
+  "images": [],
+  "slug": "risol-mayonaise-pedas",
+  "tag": ["salted", "spicy", "fried"],
+  "_updatedAt": "2024-11-17T16:56:08+00:00"
+ },
+ {
+  "id": "ZHCNckiIR1aNXk-l2ucHoA",
+  "name": "Donat Meses",
+  "price": 3000,
+  "description": "Donat kentang yang empuk dengan taburan meses coklat. Manis dan selalu jadi favorit.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1732347283-donat_mesis.png"
+   }
+  ],
+  "slug": "donat-meses",
+  "tag": ["sweet", "fried"],
+  "_updatedAt": "2024-11-23T07:35:22+00:00"
+ },
+ {
+  "id": "a4x7tHpvSRqCz7uc2sh_pg",
+  "name": "Gemblong",
+  "price": 3000,
+  "description": "Ketan goreng yang dibalut gula merah manis. Teksturnya kenyal dengan rasa legit yang khas.",
+  "images": [],
+  "slug": "gemblong",
+  "tag": ["sweet", "fried"],
+  "_updatedAt": "2024-11-17T16:40:34+00:00"
+ },
+ {
+  "id": "Omhq7OStQ4CGLYkhH5-vDg",
+  "name": "Rogut",
+  "price": 3500,
+  "description": "Mirip risoles tapi dengan rasa yang lebih manis dan isian yang padat. Unik dan beda, cocok buat kamu yang mau coba camilan tradisional.",
+  "images": [],
+  "slug": "rogut",
+  "tag": ["sweet", "fried"],
+  "_updatedAt": "2024-11-17T16:41:11+00:00"
+ },
+ {
+  "id": "BPnFVSeLQ3eLBXDnEeUrAg",
+  "name": "Dimsum (L)",
+  "price": 12000,
+  "description": "Dimsum ayam isi 4 pcs dengan tekstur lembut dan rasa gurih. Cocok buat camilan atau sharing bareng.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1732350859-dimsum_l.png"
+   }
+  ],
+  "slug": "dimsum-l",
+  "tag": ["salted"],
+  "_updatedAt": "2024-11-23T08:35:17+00:00"
+ },
+ {
+  "id": "AYlSdBVxS3ipHsFW81aV_A",
+  "name": "Dimsum (S)",
+  "price": 6000,
+  "description": "Dimsum ayam isi 2 pcs dengan rasa gurih dan tekstur lembut. Pas buat camilan ringan.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1732350859-dimsum_s.png"
+   }
+  ],
+  "slug": "dimsum-s",
+  "tag": ["salted"],
+  "_updatedAt": "2024-11-23T08:35:36+00:00"
+ },
+ {
+  "id": "bmK6_D0qRG26RifghmGvuQ",
+  "name": "Asinan Betawi",
+  "price": 17000,
+  "description": "Asinan khas Betawi dengan perpaduan sayur segar dan kuah asam manis yang menyegarkan. Cocok dinikmati saat cuaca panas.",
+  "images": [],
+  "slug": "asinan-betawi",
+  "tag": ["salted"],
+  "_updatedAt": "2024-11-17T16:42:42+00:00"
+ },
+ {
+  "id": "S9DkZWrVR8-RRYaRgr1_7w",
+  "name": "Onde-Onde",
+  "price": 3000,
+  "description": "Onde-onde dengan lapisan wijen dan isian kacang hijau yang manis. Renyah di luar, lembut di dalam.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1732347283-onde-onde.png"
+   }
+  ],
+  "slug": "onde-onde",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-23T08:42:48+00:00"
+ },
+ {
+  "id": "Ri2ggvkuS-6zdYMzVmEvyA",
+  "name": "Tahu Bakso",
+  "price": 2500,
+  "description": "Tahu goreng isi bakso gurih dengan tekstur lembut di dalam. Simple tapi selalu jadi favorit.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1732347283-tahu_bakso.png"
+   }
+  ],
+  "slug": "tahu-bakso",
+  "tag": ["salted"],
+  "_updatedAt": "2024-11-23T08:40:31+00:00"
+ },
+ {
+  "id": "Ez0EGoOzTjOLYBA3GU6ujA",
+  "name": "Nasi Urap",
+  "price": 13000,
+  "description": "Nasi dengan sayuran segar dan kelapa parut berbumbu yang gurih. Sederhana tapi penuh rasa.",
+  "images": [],
+  "slug": "nasi-urap",
+  "tag": ["salted"],
+  "_updatedAt": "2024-11-17T16:44:11+00:00"
+ },
+ {
+  "id": "WkB-HZRuQAWbXZR4nV2xqA",
+  "name": "Nasi Jinggo",
+  "price": 13000,
+  "description": "Nasi porsi praktis dengan lauk sederhana yang gurih dan sedikit pedas. Cocok buat makan cepat tapi tetap enak.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1740304179-nasi_jinggo.png"
+   }
+  ],
+  "slug": "nasi-jinggo",
+  "tag": [],
+  "_updatedAt": "2025-02-23T09:49:50+00:00"
+ },
+ {
+  "id": "bOXESyJyTQKZU6gpspzoJQ",
+  "name": "Nasi Bali",
+  "price": 15000,
+  "description": "Nasi dengan lauk khas Bali yang kaya bumbu dan sedikit pedas. Rasanya kuat dan bikin nagih.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1740304033-nasi_bali.png"
+   }
+  ],
+  "slug": "nasi-bali",
+  "tag": ["salted", "spicy"],
+  "_updatedAt": "2025-02-23T09:47:27+00:00"
+ },
+ {
+  "id": "fld1QMLQS4aV1OX5DVFEgQ",
+  "name": "Mie Goreng",
+  "price": 7000,
+  "description": "Mie goreng dengan rasa gurih manis yang pas. Cocok untuk makan praktis kapan saja.",
+  "images": [],
+  "slug": "mie-goreng",
+  "tag": ["salted"],
+  "_updatedAt": "2024-11-17T16:44:45+00:00"
+ },
+ {
+  "id": "O1yjyGYLSbWpzRnUfraxxQ",
+  "name": "Bihun Goreng",
+  "price": 7000,
+  "description": "Bihun goreng dengan bumbu gurih yang ringan. Simple tapi tetap enak dan mengenyangkan.",
+  "images": [],
+  "slug": "bihun-goreng",
+  "tag": ["salted"],
+  "_updatedAt": "2024-11-17T16:44:55+00:00"
+ },
+ {
+  "id": "JWiGdv26QvCOolaPZcN0mg",
+  "name": "Brownies",
+  "price": 4000,
+  "description": "Kue coklat yang lembut dengan rasa yang rich. Cocok buat pecinta manis.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1733328865-brownies.png"
+   }
+  ],
+  "slug": "brownies",
+  "tag": ["sweet", "boiled"],
+  "_updatedAt": "2024-12-04T16:14:31+00:00"
+ },
+ {
+  "id": "X4GlQjE_T3CwLa15xq7w9g",
+  "name": "Soes Premium",
+  "price": 4000,
+  "description": "Kue soes dengan isian krim manis yang lembut. Setiap gigitan terasa ringan dan nikmat.",
+  "images": [],
+  "slug": "soes-premium",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-17T16:45:55+00:00"
+ },
+ {
+  "id": "VVrjP8A8R2iQi2YHA2RAAg",
+  "name": "Nasi Gudeg",
+  "price": 13000,
+  "description": "Nasi dengan gudeg manis khas yang lembut dan kaya rasa. Cocok buat yang suka cita rasa tradisional.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1740304060-nasi_gudeg.png"
+   }
+  ],
+  "slug": "nasi-gudeg",
+  "tag": ["sweet"],
+  "_updatedAt": "2025-02-23T09:48:46+00:00"
+ },
+ {
+  "id": "EpWRMulxS66Bv51C9AABTQ",
+  "name": "Sushi",
+  "price": 12000,
+  "description": "Sushi dengan kombinasi nasi dan isian gurih yang segar. Cocok untuk kamu yang ingin camilan berbeda.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1740304684-sushi.jpeg"
+   }
+  ],
+  "slug": "sushi",
+  "tag": ["salted"],
+  "_updatedAt": "2025-02-23T09:58:21+00:00"
+ },
+ {
+  "id": "P2BJtYv_SZm_8m4Jg9HxIg",
+  "name": "Arem-Arem",
+  "price": 2000,
+  "description": "Nasi isi dengan lauk gurih yang dibungkus daun pisang. Simple, praktis, dan mengenyangkan.",
+  "images": [],
+  "slug": "arem-arem",
+  "tag": ["salted", "boiled"],
+  "_updatedAt": "2024-11-17T16:46:40+00:00"
+ },
+ {
+  "id": "FonidfC1Tumv4RwMlUTVxQ",
+  "name": "Puding Coklat",
+  "price": 3000,
+  "description": "Puding coklat dengan tekstur lembut dan rasa manis yang pas. Dingin-dingin paling enak.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1740304606-puding_coklatpng.png"
+   }
+  ],
+  "slug": "puding-coklat",
+  "tag": ["sweet"],
+  "_updatedAt": "2025-02-23T09:56:59+00:00"
+ },
+ {
+  "id": "fzVDf9B-SsSGWgPAyXBx7g",
+  "name": "Puding Pandan",
+  "price": 3000,
+  "description": "Puding pandan dengan aroma khas yang wangi dan rasa manis ringan. Segar dan bikin nagih.",
+  "images": [],
+  "slug": "puding-pandan",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-17T16:47:22+00:00"
+ },
+ {
+  "id": "ca7TyAHQQgqqz8CX9GtjYA",
+  "name": "Puding Stroberi",
+  "price": 3000,
+  "description": "Puding stroberi dengan rasa manis asam yang segar. Cocok jadi penutup yang ringan.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1740304630-puding_stroberi.png"
+   }
+  ],
+  "slug": "puding-stroberi",
+  "tag": ["sweet"],
+  "_updatedAt": "2025-02-23T09:57:22+00:00"
+ },
+ {
+  "id": "IwxoLV71R5KoL5ATwUw51A",
+  "name": "Chicken Katsu",
+  "price": 12000,
+  "description": "Ayam katsu crispy di luar dan juicy di dalam. Gurih dan cocok jadi menu utama.",
+  "images": [],
+  "slug": "chicken-katsu",
+  "tag": ["salted", "fried"],
+  "_updatedAt": "2024-11-17T16:47:53+00:00"
+ },
+ {
+  "id": "M7HwSyWsRNqhFUxD-HaYZQ",
+  "name": "Gethuk",
+  "price": 2000,
+  "description": "Olahan singkong yang lembut dengan rasa manis sederhana. Camilan tradisional yang selalu pas.",
+  "images": [],
+  "slug": "gethuk",
+  "tag": ["boiled"],
+  "_updatedAt": "2024-11-17T16:48:07+00:00"
+ },
+ {
+  "id": "BTFMk5EmR6uzHP8gsJrZLg",
+  "name": "Wajik",
+  "price": 3000,
+  "description": "Ketan manis dengan gula merah yang legit dan sedikit lengket. Rasanya khas dan autentik.",
+  "images": [],
+  "slug": "wajik",
+  "tag": ["sweet", "boiled"],
+  "_updatedAt": "2024-11-17T16:48:14+00:00"
+ },
+ {
+  "id": "A7_dx6sOQf2Y2igA5FC-hg",
+  "name": "Pisang Molen",
+  "price": 2000,
+  "description": "Pisang manis dibalut adonan renyah lalu digoreng. Kombinasi klasik yang selalu enak.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1740304545-pisang_molen.png"
+   }
+  ],
+  "slug": "pisang-molen",
+  "tag": ["sweet", "fried"],
+  "_updatedAt": "2025-02-23T09:55:57+00:00"
+ },
+ {
+  "id": "JA5ttnN-QNOPW6EjnW6HRA",
+  "name": "Piscok",
+  "price": 2000,
+  "description": "Pisang coklat dengan isian coklat lumer dan kulit renyah. Manis dan bikin nagih.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1740304572-piscok.png"
+   }
+  ],
+  "slug": "piscok",
+  "tag": ["sweet", "fried"],
+  "_updatedAt": "2025-02-23T09:56:23+00:00"
+ },
+ {
+  "id": "CtEUPh1RTeux_dcDuYmBVQ",
+  "name": "Kue Lumpur",
+  "price": 3000,
+  "description": "Kue lembut dengan rasa manis dan tekstur yang lumer di mulut. Cocok untuk teman minum teh.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1732347272-kue_lumpur1.png"
+   }
+  ],
+  "slug": "kue-lumpur",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-23T08:46:14+00:00"
+ },
+ {
+  "id": "Z97IdEnARM2qjcxjys4o_w",
+  "name": "Ketan Bumbu",
+  "price": 3000,
+  "description": "Ketan gurih dengan taburan bumbu khas yang sederhana tapi nikmat. Cocok buat camilan tradisional.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1740303922-ketan_bumbu.png"
+   }
+  ],
+  "slug": "ketan-bumbu",
+  "tag": [],
+  "_updatedAt": "2025-02-23T09:45:39+00:00"
+ },
+ {
+  "id": "RWa42A4lRWm6aXoTI8GAKw",
+  "name": "Bolu Marmer",
+  "price": 3000,
+  "description": "Bolu lembut dengan motif marmer dan rasa manis yang pas. Cocok untuk camilan sehari-hari.",
+  "images": [],
+  "slug": "bolu-marmer",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-17T16:49:37+00:00"
+ },
+ {
+  "id": "fLlVKcFSR2qOL-EKiG5b6Q",
+  "name": "Pie Susu",
+  "price": 3000,
+  "description": "Pie dengan isian susu manis dan tekstur lembut di tengah. Simple tapi enak.",
+  "images": [],
+  "slug": "pie-susu",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-17T16:49:52+00:00"
+ },
+ {
+  "id": "ET3KWkZqRbq0H-esGg9H9A",
+  "name": "Pie Brownies",
+  "price": 3500,
+  "description": "Perpaduan pie dan brownies dengan rasa coklat yang lebih rich. Cocok buat pecinta coklat.",
+  "images": [],
+  "slug": "pie-brownies",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-17T16:50:38+00:00"
+ },
+ {
+  "id": "FXMKniQcQAiyKJxD9Wq-xw",
+  "name": "Bolu Potong",
+  "price": 3000,
+  "description": "Bolu lembut yang dipotong praktis, dengan rasa manis ringan. Pas buat camilan cepat.",
+  "images": [],
+  "slug": "bolu-potong",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-17T16:51:54+00:00"
+ },
+ {
+  "id": "J32NyNTBT_iur-_zIpqtFw",
+  "name": "Bolu Pisang",
+  "price": 2500,
+  "description": "Bolu pisang dengan aroma khas dan tekstur lembut. Manis alami dan bikin nagih.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1740303669-bolu_pisang.png"
+   }
+  ],
+  "slug": "bolu-pisang",
+  "tag": ["sweet", "steamed"],
+  "_updatedAt": "2025-02-23T09:41:35+00:00"
+ },
+ {
+  "id": "UeRTyZgcRziu50fg7THKpQ",
+  "name": "Bomboloni",
+  "price": 4000,
+  "description": "Donat isi dengan tekstur lembut dan isian manis di dalamnya. Lebih creamy dan mengenyangkan.",
+  "images": [],
+  "slug": "bomboloni",
+  "tag": ["sweet", "fried"],
+  "_updatedAt": "2024-11-17T16:52:18+00:00"
+ },
+ {
+  "id": "GSkJKsL7TtCy7WDABiyfyQ",
+  "name": "Donat Mini",
+  "price": 10000,
+  "description": "Donat mini dengan berbagai topping manis. Cocok untuk sharing atau camilan ramai-ramai.",
+  "images": [],
+  "slug": "donat-mini",
+  "tag": ["sweet", "fried"],
+  "_updatedAt": "2024-11-17T16:55:44+00:00"
+ },
+ {
+  "id": "S4Y4CbIDQHGILsRBPa3csQ",
+  "name": "Bacang",
+  "price": 3000,
+  "description": "Nasi isi gurih yang dibungkus daun dan dimasak hingga meresap. Rasanya khas dan mengenyangkan.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1732350848-bacang.png"
+   }
+  ],
+  "slug": "bacang",
+  "tag": ["salted"],
+  "_updatedAt": "2024-11-23T08:36:31+00:00"
+ },
+ {
+  "id": "VOnD71v4QOGAzn2-04Yldg",
+  "name": "Lapis Beras",
+  "price": 3000,
+  "description": "Kue lapis dengan tekstur kenyal dan rasa manis ringan. Warna-warni dan menarik.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1732347282-lapis_beras.png"
+   }
+  ],
+  "slug": "lapis-beras",
+  "tag": ["sweet"],
+  "_updatedAt": "2025-04-15T14:33:17+01:00"
+ },
+ {
+  "id": "Di6B7IXJSWG4zvsIf65oTw",
+  "name": "Lapis Coklat",
+  "price": 4000,
+  "description": "Kue lapis coklat dengan tekstur kenyal dan rasa manis yang lebih rich. Cocok buat pecinta coklat.",
+  "images": [],
+  "slug": "lapis-coklat",
+  "tag": ["sweet", "steamed"],
+  "_updatedAt": "2024-11-17T16:56:50+00:00"
+ },
+ {
+  "id": "FyhTUJN1QKe6sB21edN-xA",
+  "name": "Bolu Kukus",
+  "price": 3000,
+  "description": "Bolu kukus yang lembut dan mengembang sempurna. Manis ringan dan enak dimakan kapan saja.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1732347272-bolu_kukus2.png"
+   }
+  ],
+  "slug": "bolu-kukus",
+  "tag": ["sweet"],
+  "_updatedAt": "2025-04-15T14:25:52+01:00"
+ },
+ {
+  "id": "FLsn4g0JT2umY4YW-zHyPw",
+  "name": "Bolu Gula Merah",
+  "price": 3000,
+  "description": "Bolu dengan rasa gula merah yang khas dan aroma yang harum. Lembut dan legit.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1733329011-bolu_gula_merah.png"
+   }
+  ],
+  "slug": "bolu-gula-merah",
+  "tag": ["sweet", "steamed"],
+  "_updatedAt": "2024-12-04T16:16:57+00:00"
+ },
+ {
+  "id": "An4qD4aNSBKXh-ir6SgLPw",
+  "name": "Bubur Sumsum",
+  "price": 7000,
+  "description": "Bubur lembut dengan kuah gula merah manis. Hangat atau dingin tetap enak.",
+  "images": [],
+  "slug": "bubur-sumsum",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-07T22:23:00+00:00"
+ },
+ {
+  "id": "Kn88-nQSRNWWNi4AzLYT6Q",
+  "name": "Pizza (S)",
+  "price": 4000,
+  "description": "Pizza ukuran kecil dengan topping gurih yang sederhana. Pas untuk camilan cepat.",
+  "images": [],
+  "slug": "pizza-s",
+  "tag": ["salted"],
+  "_updatedAt": "2024-11-07T22:23:28+00:00"
+ },
+ {
+  "id": "VqCQXQHgQ2CScMm0ZKCIGg",
+  "name": "Pizza (L)",
+  "price": 7000,
+  "description": "Pizza ukuran lebih besar dengan topping lebih banyak. Lebih puas dan mengenyangkan.",
+  "images": [],
+  "slug": "pizza-l",
+  "tag": ["salted"],
+  "_updatedAt": "2024-11-07T22:23:48+00:00"
+ },
+ {
+  "id": "JYbjh-U6SdyCBb8AwZK-CA",
+  "name": "Makaron",
+  "price": 15000,
+  "description": "Macaron manis dengan tekstur renyah di luar dan lembut di dalam. Cocok untuk camilan premium.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1732350856-macaron.png"
+   }
+  ],
+  "slug": "makaron",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-23T08:36:15+00:00"
+ },
+ {
+  "id": "X8xWpwfxRxq8KFMv9HICCA",
+  "name": "Kue Pepe",
+  "price": 2000,
+  "description": "Kue tradisional berlapis dengan tekstur kenyal dan rasa manis. Unik dan khas.",
+  "images": [],
+  "slug": "kue-pepe",
+  "tag": ["sweet", "steamed"],
+  "_updatedAt": "2024-11-08T01:51:59+00:00"
+ },
+ {
+  "id": "UuM4AYe3QkGrj6uAeWqb-w",
+  "name": "Ketan Srikaya",
+  "price": 3000,
+  "description": "Ketan lembut dengan topping srikaya manis. Kombinasi gurih dan manis yang pas.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1733328602-whatsapp_image_2024-12-04_at_1-21-35_pm-1-removebg-preview-1.png"
+   }
+  ],
+  "slug": "ketan-srikaya",
+  "tag": ["sweet", "steamed"],
+  "_updatedAt": "2024-12-04T16:10:22+00:00"
+ },
+ {
+  "id": "GhZAHA20RNybz8x4mENz-w",
+  "name": "Kue Talam",
+  "price": 2500,
+  "description": "Kue talam dengan tekstur lembut dan rasa manis gurih. Cocok untuk camilan santai.",
+  "images": [],
+  "slug": "kue-talam",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-08T01:53:04+00:00"
+ },
+ {
+  "id": "We0X4pMiSDe0XvyFYwYc0w",
+  "name": "Kue Nona Manis",
+  "price": 2500,
+  "description": "Kue lembut dengan lapisan pandan dan santan yang creamy. Manis dan wangi khas.",
+  "images": [],
+  "slug": "kue-nona-manis",
+  "tag": ["sweet", "steamed"],
+  "_updatedAt": "2024-11-08T01:53:45+00:00"
+ },
+ {
+  "id": "VgLVFQM-SDe1wW9LiKeLZw",
+  "name": "Kue Serabi",
+  "price": 6000,
+  "description": "Serabi dengan tekstur lembut dan rasa manis gurih. Cocok dinikmati hangat.",
+  "images": [],
+  "slug": "kue-serabi",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-08T01:55:25+00:00"
+ },
+ {
+  "id": "CdQQI9otQEqwZSHQykdaUg",
+  "name": "Gethuk Lindri",
+  "price": 2000,
+  "description": "Gethuk dengan tampilan cantik berwarna-warni dan rasa manis lembut. Tradisional tapi tetap menarik.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1733328982-gethuk_lindri.png"
+   }
+  ],
+  "slug": "gethuk-lindri",
+  "tag": [],
+  "_updatedAt": "2024-12-04T16:16:29+00:00"
+ },
+ {
+  "id": "YkFsUE-FQkSfwWBEpRLxYw",
+  "name": "Wingko Babat",
+  "price": 4000,
+  "description": "Kue kelapa dengan tekstur sedikit padat dan rasa manis legit. Khas dan mengenyangkan.",
+  "images": [],
+  "slug": "wingko-babat",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-08T02:03:51+00:00"
+ },
+ {
+  "id": "HFvO-vu-RtS042JjPSJc1w",
+  "name": "Martabak Telor",
+  "price": 3000,
+  "description": "Martabak isi telur dengan rasa gurih dan kulit yang renyah. Camilan klasik yang selalu enak.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1732347282-martabak_telor.png"
+   }
+  ],
+  "slug": "martabak-telor",
+  "tag": ["salted"],
+  "_updatedAt": "2024-11-23T08:43:20+00:00"
+ },
+ {
+  "id": "dyzF1r3NTvC-jONE62hqrg",
+  "name": "Bakwan",
+  "price": 2000,
+  "description": "Gorengan sayur dengan tekstur renyah di luar dan lembut di dalam. Gurih dan cocok jadi teman makan.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1733329030-bakwan.png"
+   }
+  ],
+  "slug": "bakwan",
+  "tag": ["salted", "fried"],
+  "_updatedAt": "2024-12-04T16:17:17+00:00"
+ },
+ {
+  "id": "fDZJ2Ds5SS2aTgqgYTku2Q",
+  "name": "Klepon",
+  "price": 3000,
+  "description": "Kue kenyal berisi gula merah cair yang lumer di dalam. Manis dan khas dengan taburan kelapa.",
+  "images": [],
+  "slug": "klepon",
+  "tag": ["sweet", "steamed"],
+  "_updatedAt": "2025-05-14T13:38:18+01:00"
+ },
+ {
+  "id": "GZq0RgbuRPiU8TMzSEnLpg",
+  "name": "Putu Mayang",
+  "price": 7000,
+  "description": "Kue tradisional dari tepung beras dengan tekstur lembut dan disajikan dengan kuah manis.",
+  "images": [],
+  "slug": "putu-mayang",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-08T02:05:21+00:00"
+ },
+ {
+  "id": "a4MkvcuPTZm2FX1l-RAroA",
+  "name": "Dadar Gulung",
+  "price": 2500,
+  "description": "Kue gulung dengan isian kelapa manis dan aroma pandan yang khas. Lembut dan enak.",
+  "images": [],
+  "slug": "dadar-gulung",
+  "tag": ["sweet"],
+  "_updatedAt": "2024-11-08T02:05:35+00:00"
+ },
+ {
+  "id": "PLaMAHL_QC2x-sR52qlc3w",
+  "name": "Putu Ayu",
+  "price": 3000,
+  "description": "Kue pandan lembut dengan topping kelapa parut. Manis dan harum.",
+  "images": [],
+  "slug": "putu-ayu",
+  "tag": ["sweet", "steamed"],
+  "_updatedAt": "2025-05-14T13:39:16+01:00"
+ },
+ {
+  "id": "UVPyF0byRb-Db6Jc5BeLoQ",
+  "name": "Makaroni Schotel",
+  "price": 13000,
+  "description": "Makaroni panggang dengan rasa creamy dan gurih. Cocok untuk menu berat.",
+  "images": [],
+  "slug": "makaroni-schotel",
+  "tag": ["salted", "grilled"],
+  "_updatedAt": "2024-11-08T02:15:27+00:00"
+ },
+ {
+  "id": "VQeWepHwR-O4tY6KzKYhFQ",
+  "name": "Spaghetti",
+  "price": 13000,
+  "description": "Spaghetti dengan saus gurih yang nikmat. Menu praktis ala western.",
+  "images": [],
+  "slug": "spaghetti-",
+  "tag": ["salted", "grilled"],
+  "_updatedAt": "2024-11-08T02:16:47+00:00"
+ },
+ {
+  "id": "N0CoVI3aTYa3-cXmxijJTA",
+  "name": "Spaghetti Brulee",
+  "price": 15000,
+  "description": "Spaghetti dengan topping keju yang dipanggang hingga sedikit crispy. Gurih dan creamy.",
+  "images": [],
+  "slug": "spaghetti-brulee",
+  "tag": ["salted", "grilled"],
+  "_updatedAt": "2024-11-08T02:17:00+00:00"
+ },
+ {
+  "id": "Tc6MCgjZSEulpF0A2UIYHg",
+  "name": "Mie Schotel",
+  "price": 3000,
+  "description": "Mie panggang mini dengan rasa gurih dan tekstur lembut. Praktis dan enak.",
+  "images": [
+   {
+    "url": "https://www.datocms-assets.com/144213/1733328689-schotel_mie.png"
+   }
+  ],
+  "slug": "mie-schotel",
+  "tag": ["salted"],
+  "_updatedAt": "2024-12-04T16:12:01+00:00"
+ },
+ {
+  "id": "JotHpHz-R8CluxZykvC3uA",
+  "name": "Onigiri",
+  "price": 10000,
+  "description": "Nasi kepal khas Jepang dengan isian gurih di dalam. Praktis dan mengenyangkan.",
+  "images": [],
+  "slug": "onigiri",
+  "tag": ["salted"],
+  "_updatedAt": "2024-11-08T02:17:48+00:00"
+ },
+ {
+  "id": "O_gdo-w-RiKjk1X7IDvJ2A",
+  "name": "Jamu",
+  "price": 10000,
+  "description": "Minuman tradisional dengan rasa khas dan manfaat untuk tubuh. Segar dan menyehatkan.",
+  "images": [],
+  "slug": "jamu",
+  "tag": [],
+  "_updatedAt": "2024-11-08T02:18:12+00:00"
+ }
+]

@@ -1,57 +1,130 @@
 'use client';
 
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
-import { FLAVOUR_TEXT, cn, formatIDR } from '@/lib/utils';
+import Link from 'next/link';
+import { Minus, Plus } from 'lucide-react';
+import { cn, formatIDR, getFallbackSpritePosition } from '@/lib/utils';
 import { SnackFlavour } from '@/app/data.types';
-import fallbackImg from '@/assets/panada_sad.png';
+import { useOrder } from '@/context/OrderContext';
+import fallbackSprite from '@/assets/fallback_img_sprite-removebg.png';
 
 type ProductCardProps = {
+  id: string | number;
   type?: SnackFlavour;
   imgUrl?: string;
   title: string;
+  description?: string;
   price: number;
   eager?: boolean;
-  onClick: () => void;
+  href: string;
 };
 
 export const ProductCard = ({
+  id,
   type,
   imgUrl,
   title,
+  description,
   price,
   eager,
-  onClick,
+  href,
 }: ProductCardProps) => {
+  const { items, addItem, updateQuantity } = useOrder();
+  const cartItem = items.find((i) => i.id === id);
+  const qty = cartItem?.quantity ?? 0;
+
+  const handleAdd = () => {
+    addItem({
+      id,
+      name: title,
+      price,
+      quantity: 1,
+      notes: '',
+      imgUrl,
+    });
+  };
+
   return (
-    <div onClick={onClick} className="flex flex-col w-full h-full m-auto">
-      <Card className="bg-neutral-100 border-neutral-100 flex-grow mb-2 hover:bg-amber-300 hover:border-amber-300 transition ease-in-out duration-250">
-        <CardContent className="relative h-full min-h-min flex justify-center items-center p-3">
-          <Image
-            className="rounded-xl"
-            alt={title}
-            src={imgUrl || fallbackImg}
-            width={200}
-            height={200}
-            loading={eager ? 'eager' : 'lazy'}
-            style={{ width: '200px', height: 'auto' }}
-          />
+    <div className="bg-white border border-warm-border rounded-2xl overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+      <Link href={href} className="block">
+        <div className="relative bg-white p-3 flex items-center justify-center min-h-[140px] border-b border-warm-border">
+          {imgUrl ? (
+            <Image
+              alt={title}
+              src={imgUrl}
+              width={160}
+              height={160}
+              loading={eager ? 'eager' : 'lazy'}
+              className="rounded-xl object-cover bg-white"
+              style={{ width: '140px', height: 'auto' }}
+            />
+          ) : (
+            <div
+              className="w-[100px] h-[100px] rounded-xl"
+              style={{
+                backgroundImage: `url(${fallbackSprite.src})`,
+                backgroundSize: '300% auto',
+                backgroundPosition: `${getFallbackSpritePosition(type)} center`,
+                backgroundRepeat: 'no-repeat',
+              }}
+            />
+          )}
           {type && (
             <span
               className={cn(
-                type === 'salted' ? 'bg-amber-400' : 'bg-rose-400',
-                'text-white p-1 px-2 rounded-full text-xs absolute top-2 left-2'
+                'text-white px-2 py-0.5 rounded-full text-[10px] font-semibold absolute top-2 left-2',
+                type === 'sweet' ? 'bg-rose-400' : 'bg-warm-primary-light'
               )}
             >
-              {FLAVOUR_TEXT[type]}
+              {type === 'sweet' ? 'Manis' : 'Gorengan'}
             </span>
           )}
-        </CardContent>
-      </Card>
-      <p className="mb-1 font-bold text-lg text-slate-900 truncate">{title}</p>
-      <p className="font-semibold text-sm text-slate-800">
-        {formatIDR.format(price)}
-      </p>
+        </div>
+
+        <div className="p-3 pb-0">
+          <h3 className="font-bold text-warm-text text-sm leading-tight mb-0.5 truncate">
+            {title}
+          </h3>
+          {description && (
+            <p className="text-xs text-warm-text-secondary line-clamp-2 leading-relaxed">
+              {description}
+            </p>
+          )}
+        </div>
+      </Link>
+
+      <div className="p-3 pt-2 mt-auto flex items-center justify-between gap-2">
+        <p className="font-bold text-warm-primary text-sm">
+          {formatIDR.format(price)}
+        </p>
+
+        {qty > 0 ? (
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={() => updateQuantity(id, qty - 1)}
+              className="w-7 h-7 rounded-full border border-warm-border flex items-center justify-center hover:bg-warm-bg transition-colors"
+            >
+              <Minus className="w-3 h-3 text-warm-text" />
+            </button>
+            <span className="w-5 text-center text-xs font-bold text-warm-text">
+              {qty}
+            </span>
+            <button
+              onClick={() => updateQuantity(id, qty + 1)}
+              className="w-7 h-7 rounded-full bg-warm-primary flex items-center justify-center hover:bg-warm-primary-hover transition-colors"
+            >
+              <Plus className="w-3 h-3 text-white" />
+            </button>
+          </div>
+        ) : (
+          <button
+            onClick={handleAdd}
+            className="bg-warm-primary text-white text-xs font-semibold px-3 py-1.5 rounded-full hover:bg-warm-primary-hover transition-colors"
+          >
+            Order
+          </button>
+        )}
+      </div>
     </div>
   );
 };

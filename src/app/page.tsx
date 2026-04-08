@@ -1,34 +1,9 @@
-import { executeQuery } from '@datocms/cda-client';
-import type { AllSnackResponse } from './data.types';
-import { DATOCMS_API_TOKEN } from './config';
+import type { Snack } from './data.types';
 import ItemListView from './ItemListView';
-
-const query = `
-{
-  allItems(first: 100, skip: 0) {
-    id
-    name
-    price
-    images {
-      url
-    }
-    slug
-    tag
-    _updatedAt
-  }
-}
-`;
+import staticData from '@/lib/data.json';
 
 export default async function Page() {
-  if (!DATOCMS_API_TOKEN)
-    throw new Error('NEXT_PUBLIC_DATOCMS_API_TOKEN is not set');
+  const data = staticData as Snack[];
 
-  const response: AllSnackResponse = await executeQuery(query, {
-    token: DATOCMS_API_TOKEN,
-    requestInitOptions: {
-      next: { revalidate: 300 },
-    },
-  });
-
-  return <ItemListView data={response.allItems} />;
+  return <ItemListView data={data} />;
 }
