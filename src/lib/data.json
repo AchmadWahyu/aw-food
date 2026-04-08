@@ -24,7 +24,7 @@
    }
   ],
   "slug": "risol-mayonaise",
-  "tag": ["salted", "fried"],
+  "tag": ["salted", "fried", "best-seller"],
   "_updatedAt": "2024-12-04T16:12:35+00:00"
  },
  {
@@ -216,7 +216,7 @@
   "description": "Kue soes dengan isian krim manis yang lembut. Setiap gigitan terasa ringan dan nikmat.",
   "images": [],
   "slug": "soes-premium",
-  "tag": ["sweet"],
+  "tag": ["sweet", "best-seller"],
   "_updatedAt": "2024-11-17T16:45:55+00:00"
  },
  {
@@ -364,7 +364,7 @@
    }
   ],
   "slug": "kue-lumpur",
-  "tag": ["sweet"],
+  "tag": ["sweet", "best-seller"],
   "_updatedAt": "2024-11-23T08:46:14+00:00"
  },
  {
@@ -504,7 +504,7 @@
    }
   ],
   "slug": "bolu-kukus",
-  "tag": ["sweet"],
+  "tag": ["sweet", "best-seller"],
   "_updatedAt": "2025-04-15T14:25:52+01:00"
  },
  {
@@ -764,6 +764,36 @@
   "slug": "onigiri",
   "tag": ["salted"],
   "_updatedAt": "2024-11-08T02:17:48+00:00"
+ },
+ {
+  "id": "LmprBsSlR2iQi2YHA2RBsx",
+  "name": "Lemper",
+  "price": 3000,
+  "description": "Nasi ketan gurih dengan isian ayam suwir berbumbu, dibungkus daun pisang. Lembut, gurih, dan selalu dicari.",
+  "images": [],
+  "slug": "lemper",
+  "tag": ["salted", "best-seller"],
+  "_updatedAt": "2026-04-08T12:00:00+00:00"
+ },
+ {
+  "id": "PstlKrppR2iQi2YHA2RBsy",
+  "name": "Pastel Karipap",
+  "price": 3500,
+  "description": "Pastel renyah berisi kari kentang dan daging yang gurih. Hangat dan mengenyangkan.",
+  "images": [],
+  "slug": "pastel-karipap",
+  "tag": ["salted", "fried", "best-seller"],
+  "_updatedAt": "2026-04-08T12:00:00+00:00"
+ },
+ {
+  "id": "SssSlSoloR2iQi2YHA2RBsz",
+  "name": "Sosis Solo",
+  "price": 3500,
+  "description": "Kue manis khas Solo dengan isian sosis lembut dan gula merah. Manis legit dan khas.",
+  "images": [],
+  "slug": "sosis-solo",
+  "tag": ["sweet", "best-seller"],
+  "_updatedAt": "2026-04-08T12:00:00+00:00"
  },
  {
   "id": "O_gdo-w-RiKjk1X7IDvJ2A",

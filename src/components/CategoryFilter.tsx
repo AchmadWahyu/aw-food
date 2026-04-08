@@ -11,6 +11,7 @@ type CategoryFilterProps = {
 
 const CATEGORIES = [
   { value: '', label: 'Semua' },
+  { value: 'best-seller', label: '🌮 Best Seller' },
   { value: 'fried', label: 'Gorengan' },
   { value: 'sweet', label: 'Manis' },
 ];

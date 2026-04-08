@@ -169,7 +169,7 @@ export default function ProductDetail({
 
         {/* Short description */}
         {snack.description && (
-          <p className="text-warm-text-secondary text-sm leading-relaxed line-clamp-2">
+          <p className="text-warm-text-secondary text-sm leading-relaxed">
             {snack.description}
           </p>
         )}

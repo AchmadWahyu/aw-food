@@ -13,7 +13,11 @@ export type Image = {
   url: string;
 };
 
-export type SnackFlavour = 'sweet' | 'salted' | 'fried';
+export type SnackFlavour =
+  | 'sweet'
+  | 'salted'
+  | 'fried'
+  | 'best-seller';
 
 export type Packaging = {
   name: string;

@@ -12,14 +12,14 @@ export default function HeroSection() {
   return (
     <section className="mx-4 my-4 rounded-2xl bg-gradient-to-br from-[#5C4033] to-[#3D2B1F] p-6 text-white">
       <p className="text-sm text-white/80 mb-1">
-        Pesan untuk acara atau kumpul?
+        Pesan buat acara atau kumpul?
       </p>
       <h2 className="font-heading font-bold text-xl leading-tight mb-1">
         Bisa pesan banyak
         <br />& mix menu <PartyPopper className="w-5 h-5 inline-block ml-1" />
       </h2>
       <p className="text-sm text-white/70 mb-4">
-        Cocok untuk arisan, seminar, reuni kampus
+        Cocok buat arisan, seminar, acara kampus
       </p>
       <a
         href={WA_URL}
