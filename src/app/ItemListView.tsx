@@ -64,7 +64,7 @@ export default function ItemListView({ data }: { data: Snack[] }) {
       <HeroSection />
 
       {/* Paket Hemat */}
-      <PaketHemat />
+      {/* <PaketHemat /> */}
 
       {/* Divider */}
       <div className="h-px bg-warm-border-strong mx-4 my-2" />
