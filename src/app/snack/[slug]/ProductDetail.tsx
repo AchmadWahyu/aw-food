@@ -12,6 +12,8 @@ import {
 } from 'lucide-react';
 import { useOrder } from '@/context/OrderContext';
 import { useToast } from '@/hooks/use-toast';
+import { ToastAction } from '@/components/ui/toast';
+import { ORDER_DRAWER_OPEN_HREF } from '@/lib/order-ui';
 import { cn, formatIDR, getFallbackSpritePosition } from '@/lib/utils';
 import type { Snack } from '@/app/data.types';
 import fallbackSprite from '@/assets/fallback_img_sprite-removebg.png';
@@ -52,6 +54,13 @@ export default function ProductDetail({
     toast({
       title: `${snack.name} ditambahkan`,
       description: `${quantity} item ke pesanan`,
+      action: (
+        <ToastAction asChild altText="Buka keranjang">
+          <Link href={ORDER_DRAWER_OPEN_HREF} scroll={false}>
+            Buka keranjang
+          </Link>
+        </ToastAction>
+      ),
     });
     setQuantity(1);
   };
