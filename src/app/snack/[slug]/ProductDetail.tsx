@@ -56,10 +56,21 @@ export default function ProductDetail({
     setQuantity(1);
   };
 
-  const handleShare = () => {
+  const handleShare = async () => {
     const shareUrl = `${window.location.origin}${window.location.pathname}?utm_source=share-button&utm_medium=web`;
-    window.navigator?.clipboard?.writeText(shareUrl);
-    toast({ title: 'Link tersalin!' });
+    try {
+      if (!window.navigator?.clipboard?.writeText) {
+        throw new Error('Clipboard API unavailable');
+      }
+      await window.navigator.clipboard.writeText(shareUrl);
+      toast({ title: 'Link tersalin!' });
+    } catch {
+      toast({
+        variant: 'destructive',
+        title: 'Gagal menyalin tautan',
+        description: 'Coba lagi atau salin alamat dari bilah alamat.',
+      });
+    }
   };
 
   const images =
