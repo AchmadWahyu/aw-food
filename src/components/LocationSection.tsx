@@ -3,7 +3,7 @@
 import { MapPin, Navigation } from 'lucide-react';
 
 const GOOGLE_MAPS_URL =
-  'https://www.google.com/maps/place/AW+Food+%26+Snack/@-6.3677391,106.8173840,17z';
+  'https://maps.app.goo.gl/wr2cKQEbe6BaAYHp8';
 
 export default function LocationSection() {
   return (
