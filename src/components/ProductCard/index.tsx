@@ -30,8 +30,8 @@ export const ProductCard = ({
   href,
 }: ProductCardProps) => {
   const { items, addItem, updateQuantity } = useOrder();
-  const cartItem = items.find((i) => i.id === id);
-  const qty = cartItem?.quantity ?? 0;
+  const linesForProduct = items.filter((i) => i.id === id);
+  const qty = linesForProduct.reduce((sum, i) => sum + i.quantity, 0);
 
   const handleAdd = () => {
     addItem({
@@ -42,6 +42,29 @@ export const ProductCard = ({
       notes: '',
       imgUrl,
     });
+  };
+
+  const handleDecrement = () => {
+    if (linesForProduct.length === 0) return;
+    const lastLine = linesForProduct[linesForProduct.length - 1];
+    updateQuantity(lastLine.lineId, lastLine.quantity - 1);
+  };
+
+  const handleIncrement = () => {
+    const emptyNoteLines = linesForProduct.filter((l) => !l.notes);
+    if (emptyNoteLines.length > 0) {
+      const target = emptyNoteLines[emptyNoteLines.length - 1];
+      updateQuantity(target.lineId, target.quantity + 1);
+    } else {
+      addItem({
+        id,
+        name: title,
+        price,
+        quantity: 1,
+        notes: '',
+        imgUrl,
+      });
+    }
   };
 
   return (
@@ -102,7 +125,7 @@ export const ProductCard = ({
             <div className="flex items-center gap-1.5">
               <button
                 aria-label={`Decrease quantity for ${title}`}
-                onClick={() => updateQuantity(id, qty - 1)}
+                onClick={handleDecrement}
                 className="flex h-7 w-7 items-center justify-center rounded-full border border-warm-border transition-colors hover:bg-warm-bg"
               >
                 <Minus className="h-3 w-3 text-warm-text" />
@@ -112,7 +135,7 @@ export const ProductCard = ({
               </span>
               <button
                 aria-label={`Increase quantity for ${title}`}
-                onClick={() => updateQuantity(id, qty + 1)}
+                onClick={handleIncrement}
                 className="flex h-7 w-7 items-center justify-center rounded-full bg-warm-primary transition-colors hover:bg-warm-primary-hover"
               >
                 <Plus className="h-3 w-3 text-white" />

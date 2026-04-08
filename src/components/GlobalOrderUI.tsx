@@ -1,17 +1,24 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import FloatingOrderBar from './FloatingOrderBar';
 import OrderSummaryDrawer from './OrderSummaryDrawer';
 
 export default function GlobalOrderUI() {
   const [showSummary, setShowSummary] = useState(false);
+  const viewOrderButtonRef = useRef<HTMLButtonElement>(null);
 
   return (
     <>
-      <FloatingOrderBar onViewOrder={() => setShowSummary(true)} />
+      <FloatingOrderBar
+        viewOrderButtonRef={viewOrderButtonRef}
+        onViewOrder={() => setShowSummary(true)}
+      />
       {showSummary && (
-        <OrderSummaryDrawer onClose={() => setShowSummary(false)} />
+        <OrderSummaryDrawer
+          returnFocusRef={viewOrderButtonRef}
+          onClose={() => setShowSummary(false)}
+        />
       )}
     </>
   );

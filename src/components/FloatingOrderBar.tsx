@@ -1,5 +1,6 @@
 'use client';
 
+import type { RefObject } from 'react';
 import { useOrder } from '@/context/OrderContext';
 import { formatIDR } from '@/lib/utils';
 import { ClipboardList } from 'lucide-react';
@@ -7,10 +8,12 @@ import { usePathname } from 'next/navigation';
 
 type FloatingOrderBarProps = {
   onViewOrder: () => void;
+  viewOrderButtonRef?: RefObject<HTMLButtonElement | null>;
 };
 
 export default function FloatingOrderBar({
   onViewOrder,
+  viewOrderButtonRef,
 }: FloatingOrderBarProps) {
   const { totalItems, totalQuantity, totalPrice } = useOrder();
   const pathname = usePathname();
@@ -21,6 +24,8 @@ export default function FloatingOrderBar({
   return (
     <div className="fixed left-0 right-0 z-25 px-4 pb-3 max-w-2xl mx-auto bottom-[60px]">
       <button
+        ref={viewOrderButtonRef}
+        type="button"
         onClick={onViewOrder}
         className="w-full bg-warm-primary text-white rounded-2xl px-4 py-3 flex items-center justify-between shadow-lg hover:bg-warm-primary-hover transition-colors"
       >
