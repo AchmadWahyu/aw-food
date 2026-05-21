@@ -1,15 +1,13 @@
-import { Skeleton } from '@/components/ui/skeleton';
-
 export default function PageContentSkeleton() {
   return (
-    <div>
-      <Skeleton className="w-full h-[75vw]" />
-      <div className="p-8 pb-0">
-        <Skeleton className="w-[40%] h-[2.5rem] mb-4" />
-        <Skeleton className="w-[60%] h-[1.75rem] mb-6" />
-        <Skeleton className="w-full h-[1.5rem] mb-2" />
-        <Skeleton className="w-[75%] h-[1.5rem]" />
+    <main className="min-h-screen bg-[#fff5e8] p-4">
+      <div className="mb-4 h-16 animate-pulse rounded-2xl bg-white" />
+      <div className="mb-8 aspect-[1/0.9] animate-pulse rounded-3xl bg-[#f4dfc7]" />
+      <div className="space-y-4">
+        <div className="h-8 w-32 animate-pulse rounded-full bg-[#f4dfc7]" />
+        <div className="h-7 w-24 animate-pulse rounded-full bg-[#f4dfc7]" />
+        <div className="h-20 animate-pulse rounded-2xl bg-white" />
       </div>
-    </div>
+    </main>
   );
 }

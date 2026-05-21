@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Cookie, Package } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export default function BottomNav() {
   const pathname = usePathname();
@@ -14,71 +15,29 @@ export default function BottomNav() {
 
   const snackMenu = pathname === '/';
   const packagingMenu = pathname === '/packaging';
-  const orderMenu = pathname === '/order';
-
   return (
-    <footer className="flex fixed bottom-0 bg-white w-full shadow-2xl max-w-lg mx-auto">
+    <footer className="fixed bottom-0 z-30 flex w-full max-w-lg border-t border-[#ead8bf] bg-white shadow-[0_-8px_24px_rgba(90,59,46,0.08)]">
       <Link
         prefetch
         href={`/${allParams}`}
-        className="w-full flex flex-col items-center py-3"
+        className={cn(
+          'flex w-full flex-col items-center gap-1 py-3 text-sm font-bold',
+          snackMenu ? 'text-[#db6c22]' : 'text-[#94a3bd]'
+        )}
       >
-        <Image
-          className="basis-5 shrink-0 mx-2"
-          src={snackMenu ? '/icon-snack-fill.png' : '/icon-snack.png'}
-          alt="list kue"
-          width={36}
-          height={36}
-        />
-        <p
-          className={
-            snackMenu ? 'text-sm font-bold text-orange-400' : 'text-sm'
-          }
-        >
-          List Kue
-        </p>
+        <Cookie className="h-7 w-7" />
+        Menu
       </Link>
       <Link
         prefetch
         href={`/packaging${allParams}`}
-        className="w-full flex flex-col items-center py-3"
+        className={cn(
+          'flex w-full flex-col items-center gap-1 py-3 text-sm font-bold',
+          packagingMenu ? 'text-[#db6c22]' : 'text-[#94a3bd]'
+        )}
       >
-        <Image
-          className="basis-5 shrink-0 mx-2"
-          src={
-            packagingMenu ? '/icon-packaging-fill.png' : '/icon-packaging.png'
-          }
-          alt="list kemasan"
-          width={36}
-          height={36}
-        />
-        <p
-          className={
-            packagingMenu ? 'text-sm font-bold text-orange-400' : 'text-sm'
-          }
-        >
-          List Kemasan
-        </p>
-      </Link>
-      <Link
-        prefetch
-        href={`/order${allParams}`}
-        className="w-full flex flex-col items-center py-3"
-      >
-        <Image
-          className="basis-5 shrink-0 mx-2"
-          src={orderMenu ? '/icon-order-fill.png' : '/icon-order.png'}
-          alt="Pesan"
-          width={36}
-          height={36}
-        />
-        <p
-          className={
-            orderMenu ? 'text-sm font-bold text-orange-400' : 'text-sm'
-          }
-        >
-          Pesan
-        </p>
+        <Package className="h-7 w-7" />
+        Kemasan
       </Link>
     </footer>
   );

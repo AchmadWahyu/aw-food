@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Be_Vietnam_Pro, Merriweather } from 'next/font/google';
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
@@ -8,7 +8,17 @@ import BottomNav from './navigations/BottomNav';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
-const inter = Inter({ subsets: ['latin'] });
+const beVietnamPro = Be_Vietnam_Pro({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-be-vietnam-pro',
+});
+
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+  variable: '--font-merriweather',
+});
 
 export const metadata: Metadata = {
   title: 'AW Food & Snack',
@@ -23,13 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} pb-16 max-w-lg mx-auto`}>
-        <div className="bg-yellow-300">
-          <h1 className="text-xl font-bold text-center">
-            AW Food & Snack
-          </h1>
-        </div>
-
+      <body
+        className={`${beVietnamPro.className} ${beVietnamPro.variable} ${merriweather.variable} min-h-screen bg-[#eef2f7] pb-20 max-w-lg mx-auto`}
+      >
         {children}
 
         <BottomNav />

@@ -1,9 +1,7 @@
-import dynamic from 'next/dynamic';
 import { executeQuery } from '@datocms/cda-client';
 import type { AllPackagingsResponse } from '../data.types';
 import { DATOCMS_API_TOKEN } from '../config';
-
-const TableView = dynamic(() => import('../TableView'));
+import PackagingListView from './PackagingListView';
 
 const query = `
 {
@@ -28,11 +26,6 @@ export default async function Page() {
   });
 
   return (
-    <div>
-      <TableView
-        data={response.allPackagings}
-        searchPlaceholder="Cari kemasan"
-      />
-    </div>
+    <PackagingListView data={response.allPackagings} />
   );
 }
