@@ -81,7 +81,7 @@
     {
         "id": "Omhq7OStQ4CGLYkhH5-vDg",
         "name": "Rogut",
-        "price": 3500,
+        "price": 4000,
         "description": "Mirip risoles tapi dengan rasa yang lebih manis dan isian yang padat. Unik dan beda, cocok buat kamu yang mau coba camilan tradisional.",
         "images": [],
         "slug": "rogut",
@@ -299,7 +299,7 @@
     {
         "id": "P2BJtYv_SZm_8m4Jg9HxIg",
         "name": "Arem-Arem",
-        "price": 2000,
+        "price": 2500,
         "description": "Nasi isi dengan lauk gurih yang dibungkus daun pisang. Simple, praktis, dan mengenyangkan.",
         "images": [],
         "slug": "arem-arem",
@@ -980,5 +980,17 @@
         "slug": "risol-bihun",
         "tag": [],
         "_updatedAt": "2024-11-08T02:18:12+00:00"
+    },
+    {
+        "id": "O_gdo-w-RiKjk1X7IDvJ2C",
+        "name": "Kue Gabin",
+        "price": 3000,
+        "description": "Camilan klasik dengan lapisan biskuit gabin renyah di luar dan isian lembut gurih-manis di dalam. Nikmat disantap kapan saja!",
+        "images": [],
+        "slug": "kue-gabin",
+        "tag": [
+            "sweet"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
     }
 ]
