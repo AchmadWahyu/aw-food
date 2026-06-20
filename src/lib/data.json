@@ -356,7 +356,7 @@
     {
         "id": "IwxoLV71R5KoL5ATwUw51A",
         "name": "Chicken Katsu",
-        "price": 12000,
+        "price": 14000,
         "description": "Ayam katsu crispy di luar dan juicy di dalam. Gurih dan cocok jadi menu utama.",
         "images": [],
         "slug": "chicken-katsu",
@@ -483,7 +483,7 @@
     {
         "id": "ET3KWkZqRbq0H-esGg9H9A",
         "name": "Pie Brownies",
-        "price": 3500,
+        "price": 4000,
         "description": "Perpaduan pie dan brownies dengan rasa coklat yang lebih rich. Cocok buat pecinta coklat.",
         "images": [],
         "slug": "pie-brownies",
@@ -493,21 +493,9 @@
         "_updatedAt": "2024-11-17T16:50:38+00:00"
     },
     {
-        "id": "FXMKniQcQAiyKJxD9Wq-xw",
-        "name": "Bolu Potong",
-        "price": 3000,
-        "description": "Bolu lembut yang dipotong praktis, dengan rasa manis ringan. Pas buat camilan cepat.",
-        "images": [],
-        "slug": "bolu-potong",
-        "tag": [
-            "sweet"
-        ],
-        "_updatedAt": "2024-11-17T16:51:54+00:00"
-    },
-    {
         "id": "J32NyNTBT_iur-_zIpqtFw",
         "name": "Bolu Pisang",
-        "price": 2500,
+        "price": 2000,
         "description": "Bolu pisang dengan aroma khas dan tekstur lembut. Manis alami dan bikin nagih.",
         "images": [
             {
@@ -515,6 +503,19 @@
             }
         ],
         "slug": "bolu-pisang",
+        "tag": [
+            "sweet",
+            "steamed"
+        ],
+        "_updatedAt": "2025-02-23T09:41:35+00:00"
+    },
+    {
+        "id": "J32NyNTBT_iur-_zIpqtFg",
+        "name": "Bolu Pisang Slice",
+        "price": 2500,
+        "description": "Bolu pisang slice dengan aroma khas dan tekstur lembut. Manis alami dan bikin nagih.",
+        "images": [],
+        "slug": "bolu-pisang-slice",
         "tag": [
             "sweet",
             "steamed"
@@ -566,7 +567,7 @@
     {
         "id": "VOnD71v4QOGAzn2-04Yldg",
         "name": "Lapis Beras",
-        "price": 3000,
+        "price": 2500,
         "description": "Kue lapis dengan tekstur kenyal dan rasa manis ringan. Warna-warni dan menarik.",
         "images": [
             {
@@ -639,24 +640,12 @@
         "_updatedAt": "2024-11-07T22:23:00+00:00"
     },
     {
-        "id": "Kn88-nQSRNWWNi4AzLYT6Q",
-        "name": "Pizza (S)",
-        "price": 4000,
-        "description": "Pizza ukuran kecil dengan topping gurih yang sederhana. Pas untuk camilan cepat.",
-        "images": [],
-        "slug": "pizza-s",
-        "tag": [
-            "salted"
-        ],
-        "_updatedAt": "2024-11-07T22:23:28+00:00"
-    },
-    {
         "id": "VqCQXQHgQ2CScMm0ZKCIGg",
-        "name": "Pizza (L)",
+        "name": "Pizza",
         "price": 7000,
-        "description": "Pizza ukuran lebih besar dengan topping lebih banyak. Lebih puas dan mengenyangkan.",
+        "description": "Pizza dengan topping gurih yang sederhana. Pas untuk camilan cepat.",
         "images": [],
-        "slug": "pizza-l",
+        "slug": "pizza",
         "tag": [
             "salted"
         ],
@@ -721,22 +710,9 @@
         "_updatedAt": "2024-11-08T01:53:04+00:00"
     },
     {
-        "id": "We0X4pMiSDe0XvyFYwYc0w",
-        "name": "Kue Nona Manis",
-        "price": 2500,
-        "description": "Kue lembut dengan lapisan pandan dan santan yang creamy. Manis dan wangi khas.",
-        "images": [],
-        "slug": "kue-nona-manis",
-        "tag": [
-            "sweet",
-            "steamed"
-        ],
-        "_updatedAt": "2024-11-08T01:53:45+00:00"
-    },
-    {
         "id": "VgLVFQM-SDe1wW9LiKeLZw",
         "name": "Kue Serabi",
-        "price": 6000,
+        "price": 7000,
         "description": "Serabi dengan tekstur lembut dan rasa manis gurih. Cocok dinikmati hangat.",
         "images": [],
         "slug": "kue-serabi",
@@ -832,7 +808,7 @@
     {
         "id": "a4MkvcuPTZm2FX1l-RAroA",
         "name": "Dadar Gulung",
-        "price": 2500,
+        "price": 3000,
         "description": "Kue gulung dengan isian kelapa manis dan aroma pandan yang khas. Lembut dan enak.",
         "images": [],
         "slug": "dadar-gulung",
@@ -937,7 +913,7 @@
     {
         "id": "PstlKrppR2iQi2YHA2RBsy",
         "name": "Pastel Karipap",
-        "price": 3500,
+        "price": 4000,
         "description": "Pastel renyah berisi kari kentang dan daging yang gurih. Hangat dan mengenyangkan.",
         "images": [],
         "slug": "pastel-karipap",
@@ -951,7 +927,7 @@
     {
         "id": "SssSlSoloR2iQi2YHA2RBsz",
         "name": "Sosis Solo",
-        "price": 3500,
+        "price": 3000,
         "description": "Camilan gurih khas Solo dengan kulit lembut berisi ayam suwir bumbu manis gurih",
         "images": [],
         "slug": "sosis-solo",
@@ -960,16 +936,6 @@
             "best-seller"
         ],
         "_updatedAt": "2026-04-08T12:00:00+00:00"
-    },
-    {
-        "id": "O_gdo-w-RiKjk1X7IDvJ2A",
-        "name": "Jamu",
-        "price": 10000,
-        "description": "Minuman tradisional dengan rasa khas dan manfaat untuk tubuh. Segar dan menyehatkan.",
-        "images": [],
-        "slug": "jamu",
-        "tag": [],
-        "_updatedAt": "2024-11-08T02:18:12+00:00"
     },
     {
         "id": "O_gdo-w-RiKjk1X7IDvJ2B",
