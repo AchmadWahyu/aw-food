@@ -155,7 +155,7 @@ const ItemListView = ({ data }: { data: Snack[] }) => {
 
   return (
     <main className="min-h-screen bg-[#fff5e8] pb-8 text-[#5a3b2e]">
-      <header className="sticky top-0 z-20 border-b border-[#ead8bf] bg-white">
+      <header className="sticky top-0 z-30 border-b border-[#ead8bf] bg-white">
         <div className="flex items-center justify-between px-4 py-4">
           <div className="flex min-w-0 items-center gap-3">
             <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-[#f4c86b] bg-[#fff8e8] text-[10px] font-black leading-none text-[#9b7645] shadow-sm">
