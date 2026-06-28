@@ -958,5 +958,197 @@
             "sweet"
         ],
         "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "1",
+        "name": "Panada",
+        "price": 3000,
+        "description": "Roti goreng lembut dengan isian ikan tongkol gurih yang mengenyangkan, cocok untuk camilan atau teman sarapan.",
+        "images": [],
+        "slug": "panada",
+        "tag": [
+            "savory"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "2",
+        "name": "Nasi Bakar",
+        "price": 9000,
+        "description": "Nasi dengan ayam suwir berbumbu yang dibungkus daun pisang lalu dibakar hingga harum, menghadirkan cita rasa gurih yang khas.",
+        "images": [],
+        "slug": "nasi-bakar",
+        "tag": [
+            "savory"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "3",
+        "name": "Tahu Telur",
+        "price": 4000,
+        "description": "Tahu putih dengan topping campuran telur dan potongan wortel yang disajikan dengan bumbu gurih.",
+        "images": [],
+        "slug": "tahu-telur",
+        "tag": [
+            "savory"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "4",
+        "name": "Martabak Manis",
+        "price": 4000,
+        "description": "Martabak mini manis yang memanjakan, cocok untuk pencinta camilan manis.",
+        "images": [],
+        "slug": "martabak-manis",
+        "tag": [
+            "sweet"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "5",
+        "name": "Kue Melon",
+        "price": 3000,
+        "description": "Kue kukus pandan dengan tekstur lembut dan rasa manis yang pas.",
+        "images": [],
+        "slug": "kue-melon",
+        "tag": [
+            "sweet"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "6",
+        "name": "Lapis Mawar",
+        "price": 3000,
+        "description": "Kue tepung beras berbentuk mawar cantik bertekstur kenyal dengan rasa manis yang lembut.",
+        "images": [],
+        "slug": "lapis-mawar",
+        "tag": [
+            "sweet"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "7",
+        "name": "Lapis Singkong",
+        "price": 2000,
+        "description": "Kue singkong berlapis dengan tekstur lembut dan rasa manis tradisional.",
+        "images": [],
+        "slug": "lapis-singkong",
+        "tag": [
+            "sweet"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "8",
+        "name": "Timus",
+        "price": 2000,
+        "description": "Camilan berbahan singkong parut, gula merah yang dibungkus daun pisang dengan rasa manis alami dan tekstur lembut.",
+        "images": [],
+        "slug": "timus",
+        "tag": [
+            "sweet"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "9",
+        "name": "Bolu Karakter",
+        "price": 3000,
+        "description": "Bolu kukus dengan tampilan lucu yang disukai anak-anak",
+        "images": [],
+        "slug": "bolu-karakter",
+        "tag": [
+            "sweet"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "10",
+        "name": "Nagasari",
+        "price": 3000,
+        "description": "Kue tradisional berbahan tepung beras dan potongan pisang dengan tekstur lembut serta rasa manis legit.",
+        "images": [],
+        "slug": "nagasari",
+        "tag": [
+            "sweet"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "11",
+        "name": "Nasi Kuning Kotak",
+        "price": 14000,
+        "description": "Paket nasi kuning lengkap dengan lauk pendamping yang mengenyangkan dan praktis.",
+        "images": [],
+        "slug": "nasi-kuning-kotak",
+        "tag": [
+            "savory"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "12",
+        "name": "Nasi Kuning Kecil",
+        "price": 7000,
+        "description": "Porsi mini nasi kuning dengan rasa gurih khas dan lauk pelengkap.",
+        "images": [],
+        "slug": "nasi-kuning-kecil",
+        "tag": [
+            "savory"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "13",
+        "name": "Nasi Uduk",
+        "price": 14000,
+        "description": "Nasi gurih beraroma santan yang disajikan dengan lauk pelengkap favorit.",
+        "images": [],
+        "slug": "nasi-uduk",
+        "tag": [
+            "savory"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "14",
+        "name": "Ongol-Ongol",
+        "price": 3000,
+        "description": "Kue tradisional kenyal berbalut kelapa parut dengan rasa manis legit.",
+        "images": [],
+        "slug": "ongol-ongol",
+        "tag": [
+            "sweet"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "15",
+        "name": "Risol Sayur",
+        "price": 3000,
+        "description": "Risol renyah dengan isian sayuran kentang wortel yang gurih",
+        "images": [],
+        "slug": "risol-sayur",
+        "tag": [
+            "savory"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
+    },
+    {
+        "id": "16",
+        "name": "Bolu Pelangi",
+        "price": 3000,
+        "description": "Bolu lembut berwarna-warni berisi selai stroberi dengan rasa manis yang menyenangkan.",
+        "images": [],
+        "slug": "bolu-pelangi",
+        "tag": [
+            "sweet"
+        ],
+        "_updatedAt": "2024-11-07T22:23:28+00:00"
     }
 ]
